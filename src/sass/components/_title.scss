@@ -1,0 +1,23 @@
+// for title section How is made & products
+.title {
+    font-family: 'Seymour One', sans-serif;
+    @include fonts(null, 30, 1.26, 0.04em);
+    text-transform: uppercase;
+    text-align: center;
+
+    @include tablet {
+        @include fonts(null, 34, 1.26, 0.06em);
+    }
+
+    @include desktop {
+        @include fonts(null, 36, 1.25, 0.06em);
+    }
+}
+
+.title--light{
+    color: $light-color;
+}
+
+.title--dark {
+    color: $dark-color;
+}

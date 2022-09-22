@@ -1,0 +1,33 @@
+.btn {
+  min-width: 134px;
+  height: 40px;
+  cursor: pointer;
+
+  font-family: inherit;
+  @include fonts(600, 14, 1.29, 0.04em);
+  border-width: 2px;
+  border-style: solid;
+  border-color: $btn-light-border-color;
+  border-radius: 10px;
+  color: $dark-btn-color;
+  background-color: transparent;
+
+  @include transition();
+  transition-property: color, border-color, background-color;
+
+  &:focus {
+    color: $light-btn-color;
+    border-color: $btn-dark-border-color;
+  }
+  &:hover {
+    border-color: $btn-dark-border-color;
+    color: $dark-btn-color;
+  }
+}
+
+.btn--color-light {
+  background-color: $btn-light-bg-color;
+}
+.btn--color-dark {
+  background-color: $btn-dark-bg-color;
+}

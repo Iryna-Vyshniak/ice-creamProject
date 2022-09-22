@@ -1,0 +1,26 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.76;
+}
+
+.no-scroll {
+  overflow: hidden;
+  // visibility: hidden;
+  // pointer-events: none;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main {
+  flex: 1 1 auto;
+}

@@ -1,2 +1,38 @@
+// reset
 @import './common';
-@import './example';
+
+// base
+@import 'base/commons';
+@import 'base/nullstyles';
+
+// utils
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/hidden';
+
+// components
+@import 'components/container';
+@import 'components/section';
+@import 'components/btn';
+@import 'components/title';
+@import 'components/modal';
+
+// main styles
+@import 'main-page/header';
+
+@import 'main-page/hero';
+@import 'main-page/products';
+@import 'main-page/about';
+@import 'main-page/advantages';
+@import 'main-page/gallery';
+@import 'main-page/customer-reviews';
+@import 'main-page/contacts';
+
+@import 'main-page/footer';
+
+// Modal
+@import 'main-page/modal/buy-now-1';
+@import 'main-page/modal/buy-now-2';
+@import 'main-page/modal/franchise';
+@import 'main-page/modal/our-locations';
+@import 'main-page/modal/read-more';

@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  margin: 0 auto;
+
+  @include tablet {
+    width: 734px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include desktop {
+    width: 1200px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
