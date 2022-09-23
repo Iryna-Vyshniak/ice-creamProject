@@ -31,14 +31,14 @@
       color: $light-btn-color;
       border-color: $btn-dark-border-color;
       background-color: $btn-dark-bg-color;
-    }
-  
+  }
     &:hover {
       border-color: $btn-dark-border-color;
       color: $dark-btn-color;
       background-color: $btn-dark-bg-color;
     }
 }
+
 .btn--color-dark {
   background-color: $btn-dark-bg-color;
    &:focus {
@@ -52,4 +52,4 @@
       color: $dark-btn-color;
       background-color: $btn-dark-bg-color;
     }
-}
+  }
