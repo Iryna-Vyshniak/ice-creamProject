@@ -1,0 +1,74 @@
+.hero{
+	background-color: $hero-bg;
+}
+
+.hero__container {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	width: 100%;
+
+	@include mobile {
+		width: 480px;
+	}
+
+	@include tablet {
+		width: 768px;
+	}
+
+	@include desktop {
+		width: 1200px;
+	}
+}
+
+
+
+.hero__main-content {
+	padding: 110px 53px 0px 20px;
+	flex-grow: 1;
+
+	@include tablet{
+		padding: 104px 32px 0px 32px;
+	}
+	@include desktop{
+		padding: 118px 16px 0px 16px;
+	}
+	// background-image: $bg-gradient, url(../img/hero/hero-bg-mob-min.jpg);
+	// background-repeat: no-repeat;
+	// background-size: cover;
+
+	// @include retina {
+	// 	background-image: $bg-gradient, url(../img/hero/hero-bg-mob@2x-min.jpg);
+	// }
+
+	// @include tablet {
+	// 	padding: 272px 31px 237px 119px;
+	// 	background-image: $bg-gradient, url(../img/hero/hero-bg-tab-min.jpg);
+
+	// 	@include retina {
+	// 		background-image: $bg-gradient, url(../img/hero/hero-bg-tab@2x-min.jpg);
+	// 	}
+	// }
+
+	// @include desktop {
+	// 	padding: 272px 100px 208px 100px;
+	// 	background-image: $bg-gradient, url(../img/hero/hero-bg-dt-min.jpg);
+
+	// 	@include retina {
+	// 		background-image: $bg-gradient, url(../img/hero/hero-bg-dt@2x-min.jpg);
+	// 	}
+	// }
+}
+
+
+
+
+.hero__title {
+    @include fonts(null, 26, 1.26, 0.04em);
+		}
+        
+.hero__title-big {
+    @include fonts(null, 34, 1, 0.04em);
+		}
+
+

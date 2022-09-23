@@ -1,14 +1,14 @@
 // reset
 @import './common';
 
-// base
-@import 'base/commons';
-@import 'base/nullstyles';
-
 // utils
 @import 'utils/vars';
 @import 'utils/mixins';
 @import 'utils/hidden';
+
+// base
+@import 'base/commons';
+@import 'base/nullstyles';
 
 // components
 @import 'components/container';
