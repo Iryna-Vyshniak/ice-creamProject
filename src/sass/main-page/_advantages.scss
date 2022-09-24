@@ -77,7 +77,6 @@
     position: relative;
 }
 .cow::before {
-    content: url('../images/advantages/cow.png');
     position: absolute;
     display: block;
     width: 50px;
@@ -89,6 +88,10 @@
     top: -65px; 
     left: 50%;
     transform: translate(-50%); 
+    content: url('../images/advantages/cow.png');
+    @include retina {
+        content: url('../images/advantages/cow-2x.png'); 
+    }
     }
 }
 
@@ -97,7 +100,6 @@
 }
 
 .weight::before{
-    content: url('../images/advantages/weight.png');
     position: absolute;
     display: block;
     width: 50px;
@@ -105,6 +107,10 @@
     top: -65px; 
     left: 50%;
     transform: translate(-50%);
+    content: url('../images/advantages/weight.png');
+    @include retina {
+        content: url('../images/advantages/weight-2x.png');  
+    }
 }
 
 .ice {
@@ -112,7 +118,6 @@
 }
 
 .ice::before {
-    content: url('../images/advantages/ice.png');
     position: absolute;
     display: block;
     width: 50px;
@@ -120,6 +125,10 @@
     top: -65px; 
     left: 50%;
     transform: translate(-50%);
+    content: url('../images/advantages/ice.png');
+    @include retina {
+        content: url('../images/advantages/ice-2x.png');
+    }
 }
 
 .advantages__image {
