@@ -1,4 +1,150 @@
+// загальний клас претайтл
+.pre-title {
+    font-family: 'Seymour One', sans-serif;
+    @include fonts(null, 18, 1.22, 0.04em);
+    text-transform: uppercase;
+    text-align: center;
+
+    @include tablet {
+        @include fonts(null, 22, 1.23, 0.04em);
+    }
+
+    @include desktop {
+        @include fonts(null, 30, 1.23, 0.04em);
+    }
+}
+
+.pre-title--light{
+    color: $light-color;
+}
+
+.pre-title--dark {
+    color: $dark-color;
+}
+
+//   загальна кнопка з іконкою
+
+.btn-ico {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 164px;
+    height: 42px;
+    cursor: pointer;
+  
+    font-family: inherit;
+    @include fonts(600, 14, 1.29, 0.04em);
+    
+    border-radius: 10px;
+    color: $dark-color;
+    background-color: $btn-light-border-color;
+
+    &__icon {
+        // position: absolute;
+        stroke: currentColor;
+    }
+  
+    &:focus {
+      color: $light-btn-color;
+      background-color: $btn-dark-border-color;
+      outline: none;
+      
+    }
+
+    &:hover {
+      background-color: $btn-dark-border-color;
+      color: $dark-color;
+    }
+  }
+  
+
+
+
+
+// About
+
+
 .about {
     background-color: $hero-bg;
-    padding-bottom: 60px;
+        padding-bottom: 42px;
+    @include tablet {
+        padding-bottom: 48px;
+    }
+    @include desktop {
+        padding-bottom: 60px;
+    }
+    
+    &-pre-title {
+            margin-bottom: 12px;  //для всіх версій
+        }
+    
+
+    &-title {
+            margin-bottom: 32px;
+        @include tablet {
+            margin-bottom: 72px;
+        }
+        @include desktop {
+            margin-bottom: 82px;
+        }
+
+    }
+}
+
+.about > .container {
+        padding-left: 21px;
+        padding-right: 20px;
+    @include tablet {
+        padding-left: 33px;
+        padding-right: 32px;
+    }
+    @include desktop {
+        padding-left: 18px;
+        padding-right: 121px;
+    }
+}
+
+.about-main {
+
+    @include tablet {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        margin-bottom: 0;
+    }
+    @include desktop {
+        gap: 100px;
+    }
+}
+
+.about__picture-wrapper {
+
+        width: 98vw;
+        height: auto;
+        & > picture {width: 98vw}
+    margin-bottom: 40px;
+
+    @include tablet {
+        width: auto;
+    }
+}
+
+.about-text {
+    color: $light-color;
+    font-size: 12px;
+    line-height: 1.62;
+    margin-bottom: 20px;
+
+    @include tablet {
+        line-height: 1.76;
+        margin-bottom: 48px;
+    }
+
+    @include desktop {
+        font-size: 16px;
+        letter-spacing: 0.04em;
+    }
 }

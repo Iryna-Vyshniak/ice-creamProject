@@ -1,43 +1,45 @@
-<section class="about section">
+<section class="section about">
     <div class="container">
-        <p class="tradition">tradition and love</p>
-        <h2 class="tra-title">how it's made?</h2>
+        <p class="about-pre-title pre-title pre-title--light">tradition and love</p>
+        <h2 class="about-title title title--light">how it's made?</h2>
         <div class="about-main">
-            <picture>
-                <source
-                    srcset="
-                        ./images/about/cow-des-x1.jpg 1x,
-                        ./images/about/cow-des-x2.jpg 2x
-                    "
-                    media="(min-width: 1200px)"
-                />
-                <source
-                    srcset="
-                        ./images/about/cow-tab-x1.jpg 1x,
-                        ./images/about/cow-tab-x2.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                />
-                <source
-                    srcset="
-                        ./images/about/cow-mob-x1.jpg 1x,
-                        ./images/about/cow-mob-x2.jpg 2x
-                    "
-                    media="(min-width: 480px)"
-                />
-                <img src="./images/about/cow-des-x1" alt="Our raw source" width="546">
-                
-            </picture>
+            <div class="about__picture-wrapper">
+                <picture>
+                    <source
+                        srcset="
+                            /src/images/about/cow-des-x1.png 1x,
+                            /src/images/about/cow-des-x2.png 2x
+                        "
+                        media="(min-width: 1200px)"
+                    />
+                    <source
+                        srcset="
+                            /src/images/about/cow-tab-x1.png 1x,
+                            /src/images/about/cow-tab-x2.png 2x
+                        "
+                        media="(min-width: 768px)"
+                    />
+                    <source
+                        srcset="
+                            /src/images/about/cow-mob-x1.png 1x,
+                            /src/images/about/cow-mob-x2.png 2x
+                        "
+                        media="(min-width: 320px)"
+                    />  
+                    <img src="/src/images/about/cow-des-x1.png" alt="Our raw source" width="546">
+                    
+                </picture>
+            </div>
             <div class="about-text__wrapper">
                 <p class="about-text">
-
+                    Ice is a place where you will become not only a little happier, but also healthier. Health is the main value for us, and we follow it when creating our handmade desserts. </br>
+                    We use traditional recipes and 100% natural ingredients. Our products are so natural that they can be given to children from the age of three years. Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23 milkshakes.</br>
+                    This is enough to choose ice cream and coffee for any mood!
                 </p>
-                <button class="about-btn button">
-                    <span>Read more</span>
-                    <svg>
-                        <use>
-
-                        </use>
+                <button class="about-btn btn-ico">
+                    <span class="btn-ico__text">Read more</span>
+                    <svg class="btn-ico__icon" width="12px" height="12px">
+                        <use class="btn-ico__use" src="/src/images/about/icons-temp.svg"></use>
                     </svg>
                 </button>
             </div>
