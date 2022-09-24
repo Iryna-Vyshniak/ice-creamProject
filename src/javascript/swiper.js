@@ -3,7 +3,7 @@
       pagination: {
         el: '.swiper-pagination',
       },
-    loop: true,
-    autoplay: true,
-      });
+      loop: true,
+      autoplay: true,
+        });
   })();
