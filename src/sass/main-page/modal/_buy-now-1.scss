@@ -1,0 +1,53 @@
+.buy-now.modal {
+    padding: 28px;
+
+    @include tablet {
+        paddfing: 32px 54px;
+    }
+}
+
+.buy-now__header {
+    @include font(null, 16, 1.5);
+    margin-bottom: 20px;
+
+    @include desktop {
+        @include font(null, 20, 1.4);
+        margin-bottom: calc(40 + 132 / 2);
+    }
+}
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    @include tablet {
+        flex-direction: row;
+        gap: 32px;
+    }
+}
+
+.order__item {
+}
+
+.order__name {
+}
+
+.order__input-wrapper {
+}
+
+.order__form {
+}
+
+.order__input {
+}
+
+.order__textarea {
+}
+
+.order__submit-btn.btn {
+
+}
+
