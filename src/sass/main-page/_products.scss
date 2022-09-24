@@ -1,27 +1,38 @@
-.products-container {
-  @include max-tablet {
-    background: url(../images/products/product-bgi-mob-1.svg) no-repeat center
-        top,
-      url(../images/products/product-bgi-mob-2.svg) no-repeat center,
-      url(../images/products/product-bgi-mob-3.svg) no-repeat center bottom;
-    //   background-size: 100% 745px, 100% 568px, auto;
-    background-size: contain;
-    background-repeat: no-repeat;
-    max-width: 480px;
+.products {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  background: url(../images/products/bgi-mob-1-1x.png) no-repeat center top,
+    url(../images/products/bgi-mob-2-1x.png) no-repeat center,
+    url(../images/products/bgi-mob-3-1x.png) no-repeat center bottom;
+  //   background-size: 100% 745px, 100% 568px, auto;
+
+  @include retina {
+    background-image: url(../images/products/bgi-mob-1-2x.png),
+      url(../images/products/bgi-mob-2-2x.png),
+      url(../images/products/bgi-mob-3-2x.png);
   }
+  background-size: 100%;
+  background-repeat: no-repeat;
+  max-width: 768px;
 
   @include tablet {
-    background-image: url(../images/products/products-bgi-tablet.svg);
-    width: 768px;
-    max-width: 768px;
+    background-image: url(../images/products/bgi-tablet-1x.png);
+    @include retina {
+      background-image: url(../images/products/bgi-tablet-2x.png);
+    }
+    max-width: 1200px;
     background-repeat: no-repeat;
   }
 
   @include desktop {
-    background-image: url(../images/products/product-bgi-desktop.svg);
-    width: 1200px;
-    max-width: 1200px;
+    background-image: url(../images/products/bgi-desktop-1x.png);
+    @include retina {
+      background-image: url(../images/products/bgi-desktop-2x.png);
+    }
     background-repeat: no-repeat;
+    max-width: 1600px;
   }
 }
 
