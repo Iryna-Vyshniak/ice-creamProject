@@ -2,19 +2,13 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-
-  background: url(../images/products/bgi-mob-1-1x.png) no-repeat center top,
-    url(../images/products/bgi-mob-2-1x.png) no-repeat center,
-    url(../images/products/bgi-mob-3-1x.png) no-repeat center bottom;
-  //   background-size: 100% 745px, 100% 568px, auto;
+  background: url(../images/products/mobile-bgi-1x.png);
 
   @include retina {
-    background-image: url(../images/products/bgi-mob-1-2x.png),
-      url(../images/products/bgi-mob-2-2x.png),
-      url(../images/products/bgi-mob-3-2x.png);
+    background-image: url(../images/products/mobile-bgi-2x.png);
   }
   background-size: 100%;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   max-width: 768px;
 
   @include tablet {
