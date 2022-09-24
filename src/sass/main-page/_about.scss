@@ -1,16 +1,16 @@
 // загальний клас претайтл
 .pre-title {
-    font-family: 'Seymour One', sans-serif;
-    @include fonts(null, 18, 1.22, 0.04em);
+    font-family: 'Montserrat', sans-serif;
+    @include fonts(700, 18, 1.22, 0.04em);
     text-transform: uppercase;
     text-align: center;
 
     @include tablet {
-        @include fonts(null, 22, 1.23, 0.04em);
+        @include fonts(800, 22, 1.23, 0.04em);
     }
 
     @include desktop {
-        @include fonts(null, 30, 1.23, 0.04em);
+        @include fonts(800, 30, 1.23, 0.04em);
     }
 }
 
@@ -59,9 +59,6 @@
     }
   }
   
-
-
-
 
 // About
 
@@ -120,16 +117,32 @@
     }
 }
 
-.about__picture-wrapper {
+.about__picture {
+    display: block;
 
-        width: 98vw;
         height: auto;
-        & > picture {width: 98vw}
+        // & > img {max-width: 100%}
+    @media screen and (min-width: 480px) {
+        max-width: auto;
+        width: auto;
+    }
     margin-bottom: 40px;
 
     @include tablet {
-        width: auto;
+        max-width: 375px;
+        margin-bottom: 0;
     }
+    @include desktop {
+        max-width: 546px;
+    }
+
+    & > img {
+        @media screen and (max-width: 480px) {
+            max-width: 100%;
+            
+        }
+    }
+    
 }
 
 .about-text {
@@ -146,5 +159,13 @@
     @include desktop {
         font-size: 16px;
         letter-spacing: 0.04em;
+    }
+}
+
+.about__btn.btn-ico {
+    display: block;
+    @media screen and (max-width: 767.98px) {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
