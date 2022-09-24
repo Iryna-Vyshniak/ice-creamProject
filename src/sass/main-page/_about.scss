@@ -48,6 +48,7 @@
   
     &:focus {
       color: $light-btn-color;
+      stroke: $light-btn-color;
       background-color: $btn-dark-border-color;
       outline: none;
       
