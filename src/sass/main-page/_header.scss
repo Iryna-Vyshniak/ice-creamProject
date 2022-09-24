@@ -10,24 +10,26 @@
         padding-bottom: 20px;
         // padding-right: 20px;
     }
-        @include desktop {
-            padding-top: 8px;
-            padding-bottom: 8px;
-            // padding-right: 20px;
-        }
+
+    @include desktop {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        // padding-right: 20px;
+    }
 }
 
 .header__container {
     position: relative;
+
     @include tablet {
         align-items: center;
     }
 }
 
-.mobile-nav{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+.mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .site-logo {
@@ -54,34 +56,38 @@
     fill: $light-color;
     stroke: $light-color;
 
-    & .icon-burger{
+    & .icon-burger {
         display: block;
     }
-   & .icon-close {
-    display: none;
-}
-@include tablet{
-      margin-right: 177px;
-}
-@include desktop{
-    display: none;
-}
+
+    & .icon-close {
+        display: none;
+    }
+
+    @include tablet {
+        margin-right: 177px;
+    }
+
+    @include desktop {
+        display: none;
+    }
 }
 
-.mobile-menu__button.is-open{
-& .icon-close {
+.mobile-menu__button.is-open {
+    & .icon-close {
         display: block;
     }
-& .icon-burger {
-    display: none;
+
+    & .icon-burger {
+        display: none;
+    }
 }
-} 
 
 .mobile-icons:focus > .icon-burger,
 .mobile-icons:hover > .icon-burger {
-    fill: $accent-color;
+    stroke: $accent-color;
     @include transition();
-    transition-property: fill;
+    transition-property: stroke;
 }
 
 .mobile-icons:focus > .icon-close,
@@ -94,9 +100,8 @@
 }
 
 
-.mobile-menu__container{
+.mobile-menu__container {
     background-color: $mobile-menu-bg;
- 
 
     @include max-mobile {
         display: none;
@@ -104,9 +109,19 @@
         top: 100%;
         left: 0;
         width: 100%;
+        min-height: 100vh;
+        z-index: 5;
 
         &.is-open {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            .mob-menu.is-open .mob-menu__container {
+                    transform: scale(1) rotate(360deg);
+                    @include transition();
+                    transition-property: transform;
+                }
         }
     }
 
@@ -114,18 +129,45 @@
         position: absolute;
         top: 10%;
         right: 4%;
-       
         display: block;
+
+        &.is-open {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            max-width: 100%;
+            width: 100%;
+            min-height: 100vh;
+            z-index: 5;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            .logo {
+                    display: none;
+                }
+            .mobile-menu__button,
+            .main-nav__button {
+                margin: 0;
+            }
+            .main-nav {
+                display: block;
+            }
+        }
     }
+
     @include desktop {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 }
 
-
 .main-nav {
-    display: none;
+    @include tablet {
+        display: none;
+    }
 
     @include desktop {
         display: flex;
@@ -136,28 +178,59 @@
 }
 
 .main-nav__list {
-    // display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     @include desktop {
         display: flex;
+        flex-direction: row;
         margin: 0 auto;
         z-index: 2;
     }
 }
-
+.main-nav__item {
+    margin-bottom: 0;
+}
 .main-nav__item:not(:last-child) {
-    margin-right: 27px;
+    @include mobile {
+        margin-bottom: 32px;
+    }
+
+    @include max-tablet {
+        margin-bottom: 40px;
+    }
+
+    @include desktop {
+        margin: 0;
+        margin-right: 27px;
+    }
 }
 
 .main-nav__link {
+    @include transition();
+    transition-property: color;
+    @include mobile {
+        @include fonts(700, 32, 1.2);
+        color: $light-color;
+        &:focus,
+        &:hover {
+            color: $dark-color;
+        }
+    }
+    @include tablet {
+        @include fonts(700, 48, 1.2);
+    &:focus,
+    &:hover {
+        color: $dark-color;
+    }
+}
     @include desktop {
         display: flex;
         align-items: center;
         @include fonts(700, 16, 1.25);
         color: $light-color;
-        @include transition();
-        transition-property: color;
-
         &:focus,
         &:hover {
             color: $accent-color;
@@ -167,9 +240,8 @@
 
 
 .main-nav__btn {
-    // display: none;
-
     @include tablet {
+        display: block;
         min-width: 152px;
         height: 42px;
         margin-left: 32px;
@@ -177,12 +249,12 @@
 
     @include desktop {
         display: block;
-            margin-left: 247px;
+        margin-left: 247px;
     }
 }
 
-.btn-vector{
-     @include fonts(700, 16, 1.29, 0.04em);
+.btn-vector {
+    @include fonts(700, 16, 1.29, 0.04em);
     vertical-align: middle;
     display: inline-block;
 }
@@ -209,171 +281,7 @@
 
 
 
-
-
-// .mob-menu__navigation{
-//     display: flex;
-// }
-
-// .navigation,
-// .contacts {
-//     height: 50px;
-//     width: 140px;
-// }
-
-// .navigation {
-//     outline: 1px solid teal;
-// }
-
-// .contacts {
-//     outline: 1px solid orange;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .header__main{
-//     display: none;
-//     @include desktop{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
-// }
-
-
-
-
-.mob-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    width: 100vw;
-    height: 100vh;
-
-    opacity: 1;
-    visibility: visible;
-    pointer-events: initial;
-    background-color: $mobile-menu-bg;
-
-    transform: translateX(0);
-    @include transition();
-    transition-property: opacity, visibility, transform;
-
-    @media screen and (max-height: 500px) {
-        overflow-y: scroll;
-    }
-
-    @include max-tablet {
-        display: block;
-
-        &.is-hidden {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transform: translateX(-100%);
-            @include transition();
-            transition-property: opacity, visibility, transform;
-        }
-    }
-
-    @include desktop {
-        display: none;
-    }
-}
-
-.mob-menu__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-   
-    height: 100%;
-    overflow: auto;
-}
-
-
-.menu-close {
-    margin-left: auto;
-    display: block;
-    // margin-bottom: 30px;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-
-    @include desktop {
-        display: none;
-    }
-}
-
-.mobile-menu__icon-burger {
-    fill: $light-color;
-
-
-}
-
-.mobile-menu__icon-cross {
-    stroke: $light-color;
-.mobile-menu__cross:focus > &, 
-.mobile-menu__cross:hover > & {
-      fill: $accent-color;
-      stroke: $accent-color;
-      @include transition();
-      transition-property: fill;
-    }
-}
-
-.mob-menu__list {
-    // padding-top: 140px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.mob-menu__item {
-    &:not(:last-child) {
-        margin-bottom: 40px;
-    }
-}
-
-.mob-menu__link {
-    @include fonts(700, 32, 1.2);
-    color: $light-color;
-    @include transition();
-    transition-property: color;
-    @include tablet{
-        @include fonts(700, 48, 1.2);
-    }
-    &:focus,
-    &:hover {
-        color: $dark-color;
-    }
-    @include desktop{
-        display: none;
-    }
-
-}
-
-.mob-menu__btn{
-    text-align: center;
-}
-
+// MODAL
 .backdrop {
     position: fixed;
     top: 0;
@@ -390,8 +298,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index:3;
-    
+    z-index: 3;
+
     max-width: 500px;
     width: 100%;
     min-height: 609px;
@@ -402,11 +310,12 @@
     transform: translate(-50%, -50%);
     @include transition();
     transition-property: min-height;
+
     @include desktop {
-            max-width: 528px;
-            width: 100%;
-            min-height: 581px;
-        }
+        max-width: 528px;
+        width: 100%;
+        min-height: 581px;
+    }
 }
 
 .is-hidden {
@@ -428,7 +337,7 @@
     padding: 0;
     margin: 0;
     @include circle(25, 25, 50%);
-   
+
     background: transparent;
     border-width: 1px;
     border-style: solid;
@@ -454,9 +363,8 @@
 
     .modal__button-close:focus > &,
     .modal__button-close:hover > & {
-            fill: $accent-color;
-            @include transition();
-            transition-property: fill;
-        }
-
+        fill: $accent-color;
+        @include transition();
+        transition-property: fill;
+    }
 }

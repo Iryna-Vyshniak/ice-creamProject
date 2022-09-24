@@ -19,10 +19,38 @@
 	@include desktop {
 		width: 1200px;
 	}
+
+background-image:url(../images/hero/ribbon-mob-min.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: bottom;
+
+@include retina {
+	background-image: url(../images/hero/ribbon-mob@2x-min.png);
+}
+
+@include tablet {
+	background-image: url(../images/hero/ribbon-tab-min.png);
+
+	@include retina {
+		background-image: url(../images/hero/ribbon-tab@2x-min.png);
+	}
+}
+
+@include desktop {
+	background-image: url(../imagesg/hero/ribbon-desk-min.png);
+
+	@include retina {
+		background-image: url(../images/hero/ribbon-desk@2x-min.png);
+	}
+}
+
+
 }
 
 
 .hero__main-content {
+	max-width: 247px;
 	padding: 110px 53px 0px 20px;
 	flex-grow: 1;
 
@@ -32,31 +60,7 @@
 	@include desktop{
 		padding: 118px 16px 0px 16px;
 	}
-	// background-image: $bg-gradient, url(../img/hero/hero-bg-mob-min.jpg);
-	// background-repeat: no-repeat;
-	// background-size: cover;
-
-	// @include retina {
-	// 	background-image: $bg-gradient, url(../img/hero/hero-bg-mob@2x-min.jpg);
-	// }
-
-	// @include tablet {
-	// 	padding: 272px 31px 237px 119px;
-	// 	background-image: $bg-gradient, url(../img/hero/hero-bg-tab-min.jpg);
-
-	// 	@include retina {
-	// 		background-image: $bg-gradient, url(../img/hero/hero-bg-tab@2x-min.jpg);
-	// 	}
-	// }
-
-	// @include desktop {
-	// 	padding: 272px 100px 208px 100px;
-	// 	background-image: $bg-gradient, url(../img/hero/hero-bg-dt-min.jpg);
-
-	// 	@include retina {
-	// 		background-image: $bg-gradient, url(../img/hero/hero-bg-dt@2x-min.jpg);
-	// 	}
-	// }
+	
 }
 
 
