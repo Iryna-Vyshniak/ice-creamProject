@@ -1,45 +1,112 @@
 <section class="hero">
   <div class="hero__container">
-    <div class="hero__main-content">
-      <div class="hero__title-content">
-        <h1 class="hero__title title title--light">
-          Ice cream made with <span class="hero__title-big">passion</span>
-        </h1>
-
-        <!-- buttons or link???? -->
-        <div class="hero__buttons">
-          <a class="hero__button link btn btn--color-light" href="#products"
-            >Products</a
-          >
-          <a class="hero__button link btn btn--color-light" href="#about"
-            >How it’s made?</a
-          >
+    <div class="hero__wrap">
+      <div class="hero__content-wrap">
+        <div class="hero__main-content">
+          <div class="hero__title-content">
+            <h1 class="hero__title title title--light">
+              Ice cream made with <span class="hero__title-big">passion</span>
+            </h1>
+            <!-- buttons or link???? -->
+            <div class="hero__buttons">
+              <a class="hero__button btn btn--color-light" href="#products"
+                >Products</a
+              >
+              <a class="hero__button btn btn--color-light" href="#about"
+                >How it’s made?</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- amount cafes -->
+        <div class="hero__amount">
+          <p class="hero__txt">16</p>
+          <p class="hero__txt-caffe">cafes</p>
+          <p class="hero__txt">23</p>
+          <p class="hero__txt-caffe">food trucks</p>
         </div>
       </div>
-
-      <!-- amount cafes -->
-      <div class="hero__amount">
-        <p class="hero__txt16">16</p>
-        <p class="hero__txt-cafes">cafes</p>
-
-        <p class="hero__txt23">23</p>
-        <p class="hero__txt-food">food trucks</p>
+      <!-- advertisement -->
+       <div class="hero__wrap-plate"></div>
+      <div class="hero__ad">
+      <picture>
+        <source
+          srcset="
+            ./images/hero/plate-ice-desk-min.png    1x,
+            ./images/hero/plate-ice-desk@2x-min.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/hero/plate-ice-tab-min.png    1x,
+            ./images/hero/plate-ice-tab@2x-min.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/hero/plate-ice-mob-min.png    1x,
+            ./images/hero/plate-ice-mob@2x-min.png 2x
+          "
+          media="(min-width: 320px)"
+        />
+        <img
+          class="picture-list__img"
+          src="./images/hero/plate-ice-desk-min.png"
+          title="ice-cream"
+          alt="ice-cream"
+          width="225"
+        />
+      </picture>
+          <p class="hero__after-title">
+            Ice cream is cheaper than therapy for stress. Simple Pleasure. Taste
+            It. Experience It. Ice Cream Shop? Yes, please.
+          </p>
+          <button class="hero__link-btn" type="button">
+            <svg class="hero__icon" width="8" height="8">
+              <use href="./images/icons/icons.svg#icon-Arrow-short"></use>
+              <use href="./images/icons/icons.svg#icon-Arrow-middle"></use>
+              <use href="./images/icons/icons.svg#icon-Arrow-long"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
 
-    <!-- advertisement -->
-    <div class="hero__ad">
-      <p class="hero__after-title">
-        Ice cream is cheaper than therapy for stress. Simple Pleasure. Taste It.
-        Experience It. Ice Cream Shop? Yes, please.
-      </p>
-
-      <button class="hero__link-btn" type="button">
-        <svg class="hero__icon" width="8" height="8">
-          <!-- <use href="./img/icons/icons.svg#arrow"></use> -->
-          <use href="#"></use>
-        </svg>
-      </button>
+    <div class="hero__image">
+      <picture>
+        <source
+          srcset="
+            ./images/hero/ice-cream-desk-min.png    1x,
+            ./images/hero/ice-cream-desk@2x-min.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/hero/ice-cream-tab-min.png    1x,
+            ./images/hero/ice-cream-tab@2x-min.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/hero/ice-cream-mob-min.png    1x,
+            ./images/hero/ice-cream-mob@2x-min.png 2x
+          "
+          media="(min-width: 320px)"
+        />
+        <img
+          class="picture-list__img"
+          src="./images/hero/ice-cream-desk-min.png"
+          title="ice-cream"
+          alt="ice-cream"
+          width="484"
+        />
+      </picture>
     </div>
+
+
   </div>
 </section>

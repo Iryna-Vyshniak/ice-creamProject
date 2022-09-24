@@ -3,26 +3,25 @@
     width: 100%;
     padding-top: 12px;
     padding-bottom: 12px;
-    // padding-right: 31px;
 
     @include tablet {
         padding-top: 20px;
         padding-bottom: 20px;
-        // padding-right: 20px;
     }
 
     @include desktop {
         padding-top: 8px;
         padding-bottom: 8px;
-        // padding-right: 20px;
     }
 }
 
 .header__container {
-    position: relative;
-
+    padding-right: 20px;
+    padding-left: 20px;
     @include tablet {
         align-items: center;
+        padding-right: 32px;
+        padding-left: 32px;
     }
 }
 
@@ -65,7 +64,10 @@
     }
 
     @include tablet {
-        margin-right: 177px;
+        // margin-right: 144px;
+            position: absolute;
+                top: 32%;
+                right: 22%;
     }
 
     @include desktop {
@@ -127,15 +129,15 @@
 
     @include min-max-tablet {
         position: absolute;
-        top: 10%;
-        right: 4%;
+        top: 27%;
+        right: 3%;
         display: block;
 
         &.is-open {
             position: absolute;
             top: 100%;
             left: 0;
-            max-width: 100%;
+            max-width: 100vw;
             width: 100%;
             min-height: 100vh;
             z-index: 5;
@@ -144,11 +146,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-
-            .logo {
-                    display: none;
-                }
-            .mobile-menu__button,
             .main-nav__button {
                 margin: 0;
             }
@@ -211,20 +208,15 @@
 .main-nav__link {
     @include transition();
     transition-property: color;
-    @include mobile {
         @include fonts(700, 32, 1.2);
         color: $light-color;
         &:focus,
         &:hover {
             color: $dark-color;
         }
-    }
+    
     @include tablet {
         @include fonts(700, 48, 1.2);
-    &:focus,
-    &:hover {
-        color: $dark-color;
-    }
 }
     @include desktop {
         display: flex;
@@ -240,43 +232,40 @@
 
 
 .main-nav__btn {
+    position: relative;
     @include tablet {
         display: block;
         min-width: 152px;
         height: 42px;
-        margin-left: 32px;
     }
 
     @include desktop {
         display: block;
-        margin-left: 247px;
+        margin-left: 190px;
     }
 }
 
 .btn-vector {
-    @include fonts(700, 16, 1.29, 0.04em);
-    vertical-align: middle;
-    display: inline-block;
+    position: absolute;
+    top: 35%;
+    right: 18%;
+    width: 12px;
+    height: 12px;
+    fill: transparent;
+    stroke: currentColor;
+
+    .main-nav__btn:hover & {
+            stroke: currentColor;
+            @include transition();
+            transition-property: stroke;
+    }
+    .main-nav__btn:focus & {
+        // stroke: $light-color;
+        stroke: currentColor;
+        @include transition();
+        transition-property: stroke;
+    }
 }
-
-// .btn-vector {
-//     width: 12px;
-//     height: 12px;
-//     margin-left: 7px;
-//     vertical-align: center;
-//     stroke: $dark-color;
-
-//     .main-nav__btn:hover & {
-//             stroke: $dark-color;
-//             @include transition();
-//             transition-property: stroke;
-//     }
-//     .main-nav__btn:focus & {
-//         stroke: $light-color;
-//         @include transition();
-//         transition-property: stroke;
-//     }
-// }
 
 
 

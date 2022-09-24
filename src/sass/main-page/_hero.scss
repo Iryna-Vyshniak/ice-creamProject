@@ -1,12 +1,17 @@
-.hero{
+.hero {
 	background-color: $hero-bg;
 }
 
 .hero__container {
+
 	display: flex;
 	flex-direction: column;
+	width: 328px;
+	min-height: 502px;
+	height: auto;
+
 	padding: 0;
-	width: 100%;
+	margin: 0 auto;
 
 	@include mobile {
 		width: 480px;
@@ -14,64 +19,252 @@
 
 	@include tablet {
 		width: 768px;
+		min-height: 415px;
 	}
 
 	@include desktop {
 		width: 1200px;
+		min-height: 664px;
 	}
 
-background-image:url(../images/hero/ribbon-mob-min.png);
-background-repeat: no-repeat;
-background-size: cover;
-background-position: bottom;
-
-@include retina {
-	background-image: url(../images/hero/ribbon-mob@2x-min.png);
-}
-
-@include tablet {
-	background-image: url(../images/hero/ribbon-tab-min.png);
+	background-image:url(../images/hero/ribbon-mob-min.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain;
 
 	@include retina {
-		background-image: url(../images/hero/ribbon-tab@2x-min.png);
+		background-image: url(../images/hero/ribbon-mob@2x-min.png);
+	}
+
+	@include tablet {
+		background-image: url(../images/hero/ribbon-tab-min.png);
+
+		@include retina {
+			background-image: url(../images/hero/ribbon-tab@2x-min.png);
+		}
+	}
+
+	@include desktop {
+		background-image: url(../images/hero/ribbon-desk-min.png);
+
+		@include retina {
+			background-image: url(../images/hero/ribbon-desk@2x-min.png);
+		}
 	}
 }
 
-@include desktop {
-	background-image: url(../imagesg/hero/ribbon-desk-min.png);
-
-	@include retina {
-		background-image: url(../images/hero/ribbon-desk@2x-min.png);
-	}
+.hero__wrap {
+	flex: 1 0 auto;
 }
 
-
+.hero__content-wrap{
+	justify-content: space-between;
+		align-items: flex-end;
+		display: flex;
 }
-
 
 .hero__main-content {
-	max-width: 247px;
-	padding: 110px 53px 0px 20px;
-	flex-grow: 1;
+	max-width: 250px;
+	margin: 110px 53px 0 20px;
 
+	@include tablet {
+		margin: 104px 32px 0px 32px;
+	}
+
+	@include desktop {
+		margin: 118px 16px 0px 16px;
+	}
+
+}
+
+.hero__title {
+	text-align: left;
+	flex-shrink: 1;
+	@include fonts(null, 26, 1.26, 0.04em);
+	margin-bottom: 32px;
+	background: linear-gradient(to right, #F8D24E 10%, #FCFCFC 50%, #b5f49e 60%);
+	background-size: auto auto;
+	background-clip: border-box;
+	background-size: 200% auto;
+	background-clip: text;
+	color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: textclip 2500ms linear infinite;
+	display: inline-block;
+}
+
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+
+
+.hero__title-big {
+	flex-shrink: 1;
+	@include fonts(null, 34, 1, 0.04em);
+}
+
+.hero__buttons {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	.hero__button:not(:last-child) {
+		margin-right: 8px;
+	}
+}
+
+.hero__button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 62px;
+	height: 24px;
+	border-radius: 8px;
+	padding: 8px;
+	@include fonts(600, 8, 1.25);
+
+	&:nth-child(even) {
+		text-decoration: underline;
+		background-color: transparent;
+		border: none;
+		color: $accent-color;
+
+		&:focus {
+			color: $light-btn-color;
+		}
+
+		&:hover {
+			color: $btn-dark-border-color;
+		}
+	}
+}
+
+.hero__amount {
+	display: none;
+
+	@include tablet {
+		display: block;
+	}
+}
+
+.hero__txt {
+	text-align: right;
+	text-transform: uppercase;
+	color: $dark-color;
+	margin-bottom: 4px;
+
+	@include tablet {
+		@include fonts(900, 28, 1.2, 0.04);
+	}
+
+	@include desktop {
+		@include fonts(900, 46, 1.08, 0.04);
+	}
+}
+
+.hero__txt-caffe {
+	text-align: right;
+	text-transform: uppercase;
+	color: $light-color;
+    
+	@include tablet {
+		@include fonts(null, 8, 1.2);
+		&:not(last-child){
+			margin-bottom: 20px;
+		}
+	}
+
+	@include desktop {
+		@include fonts(null, 14, 1.2);
+		&:not(last-child) {
+				margin-bottom: 16px;
+			}
+	}
+}
+
+.hero__ad {
+	display: none;
+
+	@include tablet {
+		max-width: 151px;
+		display: block;
+		@include desktop{
+			max-width: 200px;
+		}
+
+	}
+}
+
+.hero__after-title{
+	color: $light-color;
+	
 	@include tablet{
-		padding: 104px 32px 0px 32px;
+		margin-bottom: 32px;
+		@include fonts(null, 12, 1.4);
 	}
 	@include desktop{
-		padding: 118px 16px 0px 16px;
+		margin-bottom: 32px;
+		@include fonts(null, 14, 1.4);
 	}
-	
+}
+
+.hero__link-btn{
+	color: $light-color;
+	display: block;
+	margin: 0;
+}
+
+.hero__icon{
+	display: block;
+	fill: currentColor;
 }
 
 
 
+.hero__image {
+	position: absolute;
+	left: auto;
+	right: auto;
+	bottom: 0;
 
-.hero__title {
-    @include fonts(null, 26, 1.26, 0.04em);
-		}
-        
-.hero__title-big {
-    @include fonts(null, 34, 1, 0.04em);
-		}
+	img {
+		position: relative;
+		bottom: 0;
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: 0;
+	}
 
+	// &::after{
+	// 	content: "";
+	// 	background-image: url(../images/hero/ribbon-mob-min.png);
+	// 		background-repeat: no-repeat;
+	// 		background-position: bottom;
+	// 		background-size: contain;
 
+	// 		@include retina {
+	// 			background-image: url(../images/hero/ribbon-mob@2x-min.png);
+	// 		}
+
+	// 		@include tablet {
+	// 			background-image: url(../images/hero/ribbon-tab-min.png);
+
+	// 			@include retina {
+	// 				background-image: url(../images/hero/ribbon-tab@2x-min.png);
+	// 			}
+	// 		}
+
+	// 		@include desktop {
+	// 			background-image: url(../images/hero/ribbon-desk-min.png);
+
+	// 			@include retina {
+	// 				background-image: url(../images/hero/ribbon-desk@2x-min.png);
+	// 			}
+	// 		}
+	// }
+}
