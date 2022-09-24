@@ -42,8 +42,7 @@
     background-color: $btn-light-border-color;
 
     &__icon {
-        // position: absolute;
-        stroke: currentColor;
+        stroke: $dark-color;
     }
   
     &:focus {
@@ -51,7 +50,6 @@
       stroke: $light-btn-color;
       background-color: $btn-dark-border-color;
       outline: none;
-      
     }
 
     &:hover {
@@ -75,7 +73,7 @@
     }
     
     &-pre-title {
-            margin-bottom: 12px;  //для всіх версій
+            margin-bottom: 12px;  
         }
     
 
