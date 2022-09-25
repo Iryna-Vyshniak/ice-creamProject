@@ -1,15 +1,18 @@
 .advantages__section {
     background-color:  #84A178;
+    padding-top: 66px;
     padding-bottom: 60px;
-    padding-top: 100px;
   
+
     @include mobile{
         width:100%;
     }
     @include tablet {
+        padding-top: 82px;
         padding-bottom: 204px;
     }
     @include desktop {
+        padding-top: 90px;
         padding-bottom: 180px;
 }
 }
@@ -84,7 +87,7 @@
     top: -65px; 
     left: 50%;
     transform: translate(-50%); 
-    @include mobile {
+   
     top: -65px; 
     left: 50%;
     transform: translate(-50%); 
@@ -93,7 +96,6 @@
     background-size: cover;
     @include retina {
         background-image: url('../images/advantages/cow-2x.png');         
-    }
     }
 }
 
@@ -135,34 +137,4 @@
     @include retina {
         background-image: url('../images/advantages/ice-2x.png');
     }
-}
-
-.advantages__image {
-    position: relative;
-}
-
-.advantages__image::after {
-    position: absolute;
-    content: url('../images/advantages/ice-creams-mob.png');
-    position: absolute;
-    display: block;
-    border-radius: 24px;
-    top: 30px; 
-    left: 50%;
-    transform: translate(-50%);
-    @include mobile{
-    max-width: 100%;
-    }
-    @include tablet {
-    content: url('../images/advantages/ice-creams-tabl.png');
-    max-width: 100%;
-    top: 30px; 
-    left: 47.4%;    
-}
-   @include desktop {
-    content: url('../images/advantages/ice-creams-desk.png');
-    max-width: 100%; 
-    top: 30px; 
-    left: 50%; 
-}
 }

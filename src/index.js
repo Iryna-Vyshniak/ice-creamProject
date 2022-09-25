@@ -1,2 +1,3 @@
-import './JS/menu';
-import './JS/modal';
+import './javascript/menu';
+import './javascript/modal';
+import './javascript/swiper';
