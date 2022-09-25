@@ -1,34 +1,38 @@
 <section class="hero">
   <div class="hero__container">
-    <div class="hero__wrap">
-      <div class="hero__content-wrap">
-        <div class="hero__main-content">
-          <div class="hero__title-content">
-            <h1 class="hero__title title title--light">
-              Ice cream made with <span class="hero__title-big">passion</span>
-            </h1>
-            <!-- buttons or link???? -->
-            <div class="hero__buttons">
-              <a class="hero__button btn btn--color-light" href="#products"
-                >Products</a
-              >
-              <a class="hero__button btn btn--color-light" href="#about"
-                >How it’s made?</a
-              >
-            </div>
+    <div class="hero__content-wrap">
+      <div class="hero__main-content">
+        <div class="hero__title-content">
+          <h1 class="hero__title title title--light">
+            Ice cream made with <span class="hero__title-big">passion</span>
+          </h1>
+          <!-- buttons or link???? -->
+          <div class="hero__buttons">
+            <a
+              class="hero__button btn btn--color-light"
+              href="#products"
+              aria-label="link to product section"
+              >Products</a
+            >
+            <a
+              class="hero__button btn btn--color-light"
+              href="#about"
+              aria-label="link to section about making ice-cream"
+              >How it’s made?</a
+            >
           </div>
         </div>
-        <!-- amount cafes -->
-        <div class="hero__amount">
-          <p class="hero__txt">16</p>
-          <p class="hero__txt-caffe">cafes</p>
-          <p class="hero__txt">23</p>
-          <p class="hero__txt-caffe">food trucks</p>
-        </div>
       </div>
-      <!-- advertisement -->
-       <div class="hero__wrap-plate"></div>
-      <div class="hero__ad">
+      <!-- amount cafes -->
+      <div class="hero__amount">
+        <p class="hero__txt">16</p>
+        <p class="hero__txt-caffe">cafes</p>
+        <p class="hero__txt">23</p>
+        <p class="hero__txt-caffe">food trucks</p>
+      </div>
+    </div>
+    <!-- advertisement -->
+    <div class="hero__wrap-plate">
       <picture>
         <source
           srcset="
@@ -36,6 +40,7 @@
             ./images/hero/plate-ice-desk@2x-min.png 2x
           "
           media="(min-width: 1200px)"
+          width="225"
         />
         <source
           srcset="
@@ -43,34 +48,25 @@
             ./images/hero/plate-ice-tab@2x-min.png 2x
           "
           media="(min-width: 768px)"
-        />
-        <source
-          srcset="
-            ./images/hero/plate-ice-mob-min.png    1x,
-            ./images/hero/plate-ice-mob@2x-min.png 2x
-          "
-          media="(min-width: 320px)"
+          width="152"
         />
         <img
-          class="picture-list__img"
+          class="hero__plate-img"
           src="./images/hero/plate-ice-desk-min.png"
           title="ice-cream"
           alt="ice-cream"
-          width="225"
         />
       </picture>
-          <p class="hero__after-title">
-            Ice cream is cheaper than therapy for stress. Simple Pleasure. Taste
-            It. Experience It. Ice Cream Shop? Yes, please.
-          </p>
-          <button class="hero__link-btn" type="button">
-            <svg class="hero__icon" width="8" height="8">
-              <use href="./images/icons/icons.svg#icon-Arrow-short"></use>
-              <use href="./images/icons/icons.svg#icon-Arrow-middle"></use>
-              <use href="./images/icons/icons.svg#icon-Arrow-long"></use>
-            </svg>
-          </button>
-        </div>
+      <div class="hero__ad">
+        <p class="hero__after-title">
+          Ice cream is cheaper than therapy for stress. Simple Pleasure. Taste
+          It. Experience It. Ice Cream Shop? Yes, please.
+        </p>
+        <button class="hero__link-btn" type="button">
+          <svg class="hero__icon" width="8" height="8">
+            <use href="./images/icons/icons.svg#icon-white-arrow"></use>
+          </svg>
+        </button>
       </div>
     </div>
 
@@ -82,6 +78,7 @@
             ./images/hero/ice-cream-desk@2x-min.png 2x
           "
           media="(min-width: 1200px)"
+          width="484"
         />
         <source
           srcset="
@@ -89,6 +86,7 @@
             ./images/hero/ice-cream-tab@2x-min.png 2x
           "
           media="(min-width: 768px)"
+          width="270"
         />
         <source
           srcset="
@@ -96,17 +94,14 @@
             ./images/hero/ice-cream-mob@2x-min.png 2x
           "
           media="(min-width: 320px)"
+          width="170"
         />
         <img
           class="picture-list__img"
           src="./images/hero/ice-cream-desk-min.png"
-          title="ice-cream"
           alt="ice-cream"
-          width="484"
         />
       </picture>
     </div>
-
-
   </div>
 </section>

@@ -1,6 +1,240 @@
 <header class="header">
   <div class="container header__container">
-    <!-- mobile-navigation -->
+    <!-- <div class="header__wrap-centered"> -->
+    <a class="header__logo logo" href="./index.html">
+      <!-- <svg width="40" height="37">
+        <use class="icon-logo" href="./images/icons/icons.svg#icon-logo"></use>
+      </svg> -->
+      <picture>
+        <source
+          srcset="
+            ./images/hero/logo-ice-desk-min.png    1x,
+            ./images/hero/logo-ice-desk@2x-min.png 2x
+          "
+          media="(min-width: 1200px)"
+          width="60"
+        />
+        <source
+          srcset="
+            ./images/hero/logo-ice-tab-min.png    1x,
+            ./images/hero/logo-ice-tab@2x-min.png 2x
+          "
+          media="(min-width: 768px)"
+          width="48"
+        />
+        <source
+          srcset="
+            ./images/hero/logo-ice-mob-min-min.png 1x,
+            ./images/hero/logo-ice-mob@2x-min.png  2x
+          "
+          media="(min-width: 320px)"
+          width="40"
+        />
+        <img
+          class="logo__img"
+          src="./images/hero/logo-ice-desk-min.png"
+          alt="logo ice-cream"
+        />
+      </picture>
+    </a>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a
+            href="./index.html"
+            class="navigation__link current"
+            aria-label="link to home section"
+            >Home</a
+          >
+        </li>
+        <li class="navigation__item">
+          <a
+            href="#gallery"
+            class="navigation__link"
+            aria-label="link to gallery section"
+            >About us</a
+          >
+        </li>
+        <li class="navigation__item">
+          <a
+            href="#about"
+            class="navigation__link"
+            aria-label="link to about us section"
+            >How it`s made?</a
+          >
+        </li>
+        <li class="navigation__item">
+          <a
+            href="#products"
+            class="navigation__link"
+            aria-label="link to products section"
+            >Our products</a
+          >
+        </li>
+        <li class="navigation__item">
+          <a
+            href="#contacts"
+            class="navigation__link"
+            aria-label="link to contacts section"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <!-- burger open-mobile-menu-->
+    <div class="mobile-menu__buttons">
+      <button type="button" class="mobile-menu__button menu-open">
+        <svg
+          class="mobile-menu__burger"
+          width="40"
+          height="40"
+          aria-label="Перемикач мобільного меню"
+        >
+          <use
+            class="mobile-menu__icon-burger"
+            href="./images/icons/icons.svg#icon-burger"
+          ></use>
+        </svg>
+      </button>
+
+      <button
+        type="button"
+        class="btn btn--color-light connect__button"
+        data-modal-open
+      >
+        Buy now
+        <svg class="btn-vector" width="12" height="12">
+          <use
+            class="icon-logo"
+            href="./images/icons/icons.svg#icon-frame-next"
+          ></use>
+        </svg>
+      </button>
+    </div>
+    <!-- </div> -->
+
+    <div class="mobile-menu is-hidden">
+      <div class="mobile-menu__container">
+        <div class="mobile-menu__top">
+          <a class="header__logo logo" href="./index.html">
+            <!-- <svg width="40" height="37">
+              <use
+                class="icon-logo"
+                href="./images/icons/icons.svg#icon-logo"
+              ></use>
+            </svg> -->
+
+            <picture>
+              <source
+                srcset="
+                  ./images/hero/logo-ice-desk-min.png    1x,
+                  ./images/hero/logo-ice-desk@2x-min.png 2x
+                "
+                media="(min-width: 1200px)"
+                width="60"
+              />
+              <source
+                srcset="
+                  ./images/hero/logo-ice-tab-min.png    1x,
+                  ./images/hero/logo-ice-tab@2x-min.png 2x
+                "
+                media="(min-width: 768px)"
+                width="48"
+              />
+              <source
+                srcset="
+                  ./images/hero/logo-ice-mob-min-min.png 1x,
+                  ./images/hero/logo-ice-mob@2x-min.png  2x
+                "
+                media="(min-width: 320px)"
+                width="40"
+              />
+              <img
+                class="logo__img"
+                src="./images/hero/logo-ice-desk-min.png"
+                alt="logo ice-cream"
+              />
+            </picture>
+          </a>
+          <button type="button" class="mobile-menu__button menu-close">
+            <svg
+              class="mobile-menu__cross"
+              width="40"
+              height="40"
+              aria-label="Перемикач мобільного меню"
+            >
+              <use
+                class="mobile-menu__icon-cross"
+                href="./images/icons/icons.svg#icon-modal-close"
+              ></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="mobile-menu__navigation-centered">
+          <nav class="mobile-menu__navigation">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a href="./index.html" class="mobile-menu__link">Home</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a
+                  href="#gallery"
+                  class="mobile-menu__link"
+                  aria-label="link to gallery section"
+                  >About us</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a
+                  href="#about"
+                  class="mobile-menu__link"
+                  aria-label="link to about us section"
+                  >How it`s made?</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a
+                  href="#products"
+                  class="mobile-menu__link"
+                  aria-label="link to products section"
+                  >Our products</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a
+                  href="#contacts"
+                  class="mobile-menu__link"
+                  aria-label="link to contacts section"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <button
+            class="btn btn--color-light mobile-menu__btn"
+            type="button"
+            data-mobile-open
+          >
+            Buy now
+            <svg class="btn-vector" width="12" height="12">
+              <use
+                class="icon-logo"
+                href="./images/icons/icons.svg#icon-frame-next"
+              ></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ONE NAVIGATION -->
+
+<!-- <header class="header">
+  <div class="container header__container">
+  
     <nav class="mobile-nav">
       <a class="logo" href="./index.html">
         <svg class="site-logo" width="40" height="37">
@@ -36,44 +270,44 @@
       </button>
 
       <div class="mobile-menu__container" id="menu-container" data-menu>
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
               <a
                 href="./index.html"
-                class="main-nav__link current"
+                class="navigation__link current"
                 aria-label="link to home section"
                 >Home</a
               >
             </li>
-            <li class="main-nav__item">
+            <li class="navigation__item">
               <a
                 href="#gallery"
-                class="main-nav__link"
+                class="navigation__link"
                 aria-label="link to gallery section"
                 >About us</a
               >
             </li>
-            <li class="main-nav__item">
+            <li class="navigation__item">
               <a
                 href="#about"
-                class="main-nav__link"
+                class="navigation__link"
                 aria-label="link to about us section"
                 >How it`s made?</a
               >
             </li>
-            <li class="main-nav__item">
+            <li class="navigation__item">
               <a
                 href="#products"
-                class="main-nav__link"
+                class="navigation__link"
                 aria-label="link to products section"
                 >Our products</a
               >
             </li>
-            <li class="main-nav__item">
+            <li class="navigation__item">
               <a
                 href="#contacts"
-                class="main-nav__link"
+                class="navigation__link"
                 aria-label="link to contacts section"
                 >Contact</a
               >
@@ -83,11 +317,10 @@
 
         <button
           type="button"
-          class="main-nav__btn btn btn--color-light"
+          class="navigation__btn btn btn--color-light"
           data-modal-open
         >
           Buy now
-          <!--<span class="btn-vector">&#62;</span> -->
           <svg class="btn-vector" width="12" height="12">
             <use
               class="icon-logo"
@@ -98,7 +331,7 @@
       </div>
     </nav>
   </div>
-</header>
+</header> -->
 
 <div class="backdrop is-hidden" data-modal>
   <div class="modal">

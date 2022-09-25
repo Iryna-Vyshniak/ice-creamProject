@@ -16,22 +16,31 @@
 }
 
 .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-right: 20px;
     padding-left: 20px;
+
     @include tablet {
         align-items: center;
         padding-right: 32px;
         padding-left: 32px;
     }
-}
-
-.mobile-nav {
-    display: flex;
+@include desktop {
     align-items: center;
-    justify-content: space-between;
+    padding-right: 16px;
+    padding-left: 16px;
+}
 }
 
-.site-logo {
+// .header__wrap-centered{
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// }
+
+.header__logo {
     width: 40px;
     height: 37px;
 
@@ -46,28 +55,135 @@
     }
 }
 
+.navigation {
+    display: none;
+
+    @include desktop {
+        display: flex;
+        margin-left: 70px;
+    }
+}
+
+.navigation__list {
+    display: flex;
+}
+
+.navigation__item:not(:last-child) {
+    margin-right: 27px;
+}
+
+.navigation__link {
+    display: flex;
+    align-items: center;
+    @include fonts(700, 16, 1.17);
+    color: $light-color;
+
+    &:focus,
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+.current{
+    color: $accent-color;
+}
+
+.mobile-menu__buttons {
+    display: flex;
+    align-items: center;
+}
+
+
 .mobile-menu__button {
     display: inline-flex;
-    margin-left: auto;
+    margin: 0;
     padding: 0;
-    background-color: transparent;
     border: none;
+    background-color: transparent;
+    background-color: transparent;
     fill: $light-color;
     stroke: $light-color;
 
-    & .icon-burger {
-        display: block;
-    }
 
-    & .icon-close {
+    @include desktop {
         display: none;
     }
+}
+
+
+.connect__button {
+    display: none;
 
     @include tablet {
-        // margin-right: 144px;
-            position: absolute;
-                top: 32%;
-                right: 22%;
+        position: relative;
+        min-width: 152px;
+        height: 42px;
+        display: block;
+        margin-left: 32px;
+    }
+
+    @include desktop {
+        margin-left: 0;
+    }
+}
+
+.btn-vector {
+    position: absolute;
+    top: 35%;
+    right: 11%;
+    width: 12px;
+    height: 12px;
+    fill: transparent;
+    stroke: currentColor;
+
+    .connect__button:hover & {
+        stroke: currentColor;
+        @include transition();
+        transition-property: stroke;
+    }
+
+    .connect__button:focus & {
+        stroke: currentColor;
+        @include transition();
+        transition-property: stroke;
+    }
+}
+
+
+
+
+.mobile-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+    z-index: 6;
+    background-color: $mobile-menu-bg;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    transform: translateX(0);
+    @include transition();
+    transition-property: opacity, visibility, transform;
+
+    @media screen and (max-height: 500px) {
+        overflow-y: scroll;
+    }
+
+    @include max-mobile {
+        display: block;
+
+        &.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateX(-100%);
+            @include transition();
+            transition-property: opacity, visibility, transform;
+        }
     }
 
     @include desktop {
@@ -75,122 +191,79 @@
     }
 }
 
-.mobile-menu__button.is-open {
-    & .icon-close {
-        display: block;
-    }
-
-    & .icon-burger {
-        display: none;
-    }
-}
-
-.mobile-icons:focus > .icon-burger,
-.mobile-icons:hover > .icon-burger {
-    stroke: $accent-color;
-    @include transition();
-    transition-property: stroke;
-}
-
-.mobile-icons:focus > .icon-close,
-.mobile-icons:hover > .icon-close {
-    fill: $accent-color;
-    transform: rotate(360deg);
-    transform-origin: center;
-    @include transition();
-    transition-property: fill, transform;
-}
 
 
 .mobile-menu__container {
-    background-color: $mobile-menu-bg;
-
-    @include max-mobile {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        min-height: 100vh;
-        z-index: 5;
-
-        &.is-open {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            .mob-menu.is-open .mob-menu__container {
-                    transform: scale(1) rotate(360deg);
-                    @include transition();
-                    transition-property: transform;
-                }
-        }
-    }
-
-    @include min-max-tablet {
-        position: absolute;
-        top: 27%;
-        right: 3%;
-        display: block;
-
-        &.is-open {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            max-width: 100vw;
-            width: 100%;
-            min-height: 100vh;
-            z-index: 5;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            .main-nav__button {
-                margin: 0;
-            }
-            .main-nav {
-                display: block;
-            }
-        }
-    }
-
-    @include desktop {
-        display: flex;
-        justify-content: space-between;
-    }
+    display: flex;
+        flex-direction: column;
+        padding: 31px;
+        height: 100%;
+        overflow: auto;
 }
 
-.main-nav {
+.mobile-menu__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 52px;
+    min-height: 80px;
     @include tablet {
-        display: none;
-    }
-
-    @include desktop {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex: 1 0 auto;
+        margin-bottom: 76px;
     }
 }
 
-.main-nav__list {
+
+
+.menu-close {
+    margin-left: auto;
+    display: block;
+}
+
+.mobile-menu__icon-burger {
+    fill: $light-color;
+}
+
+.mobile-menu__icon-cross {
+    stroke: $light-color;
+    fill: $light-color;
+}
+
+.mobile-menu__burger:focus > .mobile-menu__icon-burger,
+.mobile-menu__burger:hover > .mobile-menu__icon-burger {
+    fill: $accent-color;
+    @include transition();
+    transition-property: fill;
+}
+
+.mobile-menu__cross:focus > .mobile-menu__icon-cross,
+.mobile-menu__cross:hover > .mobile-menu__icon-cross {
+    fill: $accent-color;
+    stroke: $accent-color;
+    @include transition();
+    transition-property: fill;
+}
+
+
+.mobile-menu__navigation-centered{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+}
 
-    @include desktop {
-        display: flex;
-        flex-direction: row;
-        margin: 0 auto;
-        z-index: 2;
-    }
+
+
+.mobile-menu__navigation {
+    flex: 1 0 auto;
+    text-align: center;
 }
-.main-nav__item {
-    margin-bottom: 0;
+
+
+.mobile-menu__list {
+    margin-bottom: 111px;
 }
-.main-nav__item:not(:last-child) {
+
+.mobile-menu__item:not(:last-child) {
     @include mobile {
         margin-bottom: 32px;
     }
@@ -198,74 +271,361 @@
     @include max-tablet {
         margin-bottom: 40px;
     }
-
-    @include desktop {
-        margin: 0;
-        margin-right: 27px;
-    }
 }
 
-.main-nav__link {
+.mobile-menu__link {
     @include transition();
     transition-property: color;
-        @include fonts(700, 32, 1.2);
-        color: $light-color;
-        &:focus,
-        &:hover {
-            color: $dark-color;
-        }
-    
+    @include fonts(700, 32, 1.2);
+    color: $light-color;
+
+    &:focus,
+    &:hover {
+        color: $dark-color;
+    }
+
     @include tablet {
         @include fonts(700, 48, 1.2);
-}
-    @include desktop {
-        display: flex;
-        align-items: center;
-        @include fonts(700, 16, 1.25);
-        color: $light-color;
-        &:focus,
-        &:hover {
-            color: $accent-color;
-        }
     }
 }
 
-
-.main-nav__btn {
+.mobile-menu__btn {
     position: relative;
-    @include tablet {
-        display: block;
-        min-width: 152px;
-        height: 42px;
-    }
+    display: block;
+    max-width: 152px;
+    height: 42px;
 
-    @include desktop {
-        display: block;
-        margin-left: 190px;
+    @include tablet {
+        display: none;
+
     }
 }
 
 .btn-vector {
     position: absolute;
     top: 35%;
-    right: 18%;
+    right: 11%;
     width: 12px;
     height: 12px;
     fill: transparent;
     stroke: currentColor;
 
-    .main-nav__btn:hover & {
-            stroke: currentColor;
-            @include transition();
-            transition-property: stroke;
+    .mobile-menu__btn:hover & {
+        stroke: currentColor;
+        @include transition();
+        transition-property: stroke;
     }
-    .main-nav__btn:focus & {
-        // stroke: $light-color;
+
+    .mobile-menu__btn:focus & {
         stroke: currentColor;
         @include transition();
         transition-property: stroke;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// ONE NAVIGATION
+
+// .header {
+//     position: absolute;
+//     width: 100%;
+//     padding-top: 12px;
+//     padding-bottom: 12px;
+
+//     @include tablet {
+//         padding-top: 20px;
+//         padding-bottom: 20px;
+//     }
+
+//     @include desktop {
+//         padding-top: 8px;
+//         padding-bottom: 8px;
+//     }
+// }
+
+// .header__container {
+//     position: relative;
+//     padding-right: 20px;
+//     padding-left: 20px;
+
+//     @include tablet {
+//         align-items: center;
+//         padding-right: 32px;
+//         padding-left: 32px;
+//     }
+// }
+
+// .mobile-nav {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// }
+
+// .site-logo {
+//     width: 40px;
+//     height: 37px;
+
+//     @include tablet {
+//         width: 48px;
+//         height: 44px;
+//     }
+
+//     @include desktop {
+//         width: 60px;
+//         height: 65px;
+//     }
+// }
+
+// .mobile-menu__button {
+//     position: relative;
+//     display: inline-flex;
+//     margin-left: auto;
+//     padding: 0;
+//     background-color: transparent;
+//     border: none;
+//     fill: $light-color;
+//     stroke: $light-color;
+
+//     & .icon-burger {
+//         display: block;
+//     }
+
+//     & .icon-close {
+//         display: none;
+//     }
+
+//     @include tablet {
+//         position: absolute;
+//         top: 32%;
+//         right: 22%;
+//         z-index: 5;
+//         margin-right: 32px;
+
+//         .icon-close {
+//             margin-right: 0;
+//             position: absolute;
+//             top: 32%;
+//             right: 0;
+//             z-index: 5;
+
+//         }
+//     }
+
+//     @include desktop {
+//         display: none;
+//     }
+// }
+
+// .mobile-menu__button.is-open {
+//     & .icon-close {
+//         display: block;
+//     }
+
+//     & .icon-burger {
+//         display: none;
+//     }
+// }
+
+// .mobile-icons:focus > .icon-burger,
+// .mobile-icons:hover > .icon-burger {
+//     stroke: $accent-color;
+//     @include transition();
+//     transition-property: stroke;
+// }
+
+// .mobile-icons:focus > .icon-close,
+// .mobile-icons:hover > .icon-close {
+//     fill: $accent-color;
+//     transform: rotate(360deg);
+//     transform-origin: center;
+//     @include transition();
+//     transition-property: fill, transform;
+// }
+
+
+// .mobile-menu__container {
+//     background-color: $mobile-menu-bg;
+
+//     @include max-mobile {
+//         display: none;
+//         position: absolute;
+//         top: 100%;
+//         left: 0;
+//         width: 100%;
+//         min-height: 100vh;
+//         z-index: 6;
+
+//         &.is-open {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             justify-content: space-around;
+//         }
+//     }
+
+//     @include min-max-tablet {
+//         position: absolute;
+//         top: 27%;
+//         right: 3%;
+//         display: block;
+
+//         &.is-open {
+//             position: absolute;
+//             top: 100%;
+//             left: 0;
+//             max-width: 100vw;
+//             width: 100%;
+//             min-height: 100vh;
+//             z-index: 6;
+
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             justify-content: space-around;
+
+//             .main-nav__button {
+//                 margin: 0;
+//             }
+
+//             .main-nav {
+//                 display: block;
+//             }
+//         }
+//     }
+
+//     @include desktop {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+// }
+
+// .main-nav {
+//     @include tablet {
+//         display: none;
+//     }
+
+//     @include desktop {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         flex: 1 0 auto;
+//     }
+// }
+
+// .main-nav__list {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+
+//     @include desktop {
+//         display: flex;
+//         flex-direction: row;
+//         margin: 0 auto;
+//         z-index: 2;
+//     }
+// }
+
+// .main-nav__item {
+//     margin-bottom: 0;
+// }
+
+// .main-nav__item:not(:last-child) {
+//     @include mobile {
+//         margin-bottom: 32px;
+//     }
+
+//     @include max-tablet {
+//         margin-bottom: 40px;
+//     }
+
+//     @include desktop {
+//         margin: 0;
+//         margin-right: 27px;
+//     }
+// }
+
+// .main-nav__link {
+//     @include transition();
+//     transition-property: color;
+//     @include fonts(700, 32, 1.2);
+//     color: $light-color;
+
+//     &:focus,
+//     &:hover {
+//         color: $dark-color;
+//     }
+
+//     @include tablet {
+//         @include fonts(700, 48, 1.2);
+//     }
+
+//     @include desktop {
+//         display: flex;
+//         align-items: center;
+//         @include fonts(700, 16, 1.25);
+//         color: $light-color;
+
+//         &:focus,
+//         &:hover {
+//             color: $accent-color;
+//         }
+//     }
+// }
+
+
+// .main-nav__btn {
+//     position: relative;
+//     min-width: 152px;
+//     height: 42px;
+
+//     @include tablet {
+//         display: block;
+
+//         .mobile-menu__container.is-open {
+//             display: none;
+//         }
+
+//     }
+
+//     @include desktop {
+//         display: block;
+//         margin-left: 190px;
+//     }
+// }
+
+// .btn-vector {
+//     position: absolute;
+//     top: 35%;
+//     right: 11%;
+//     width: 12px;
+//     height: 12px;
+//     fill: transparent;
+//     stroke: currentColor;
+
+//     .main-nav__btn:hover & {
+//         stroke: currentColor;
+//         @include transition();
+//         transition-property: stroke;
+//     }
+
+//     .main-nav__btn:focus & {
+//         // stroke: $light-color;
+//         stroke: currentColor;
+//         @include transition();
+//         transition-property: stroke;
+//     }
+// }
 
 
 
@@ -294,7 +654,7 @@
     min-height: 609px;
     padding: 40px;
 
-    background-color: #fff;
+    background-color: $light-color;
     border-radius: 10px;
     transform: translate(-50%, -50%);
     @include transition();
