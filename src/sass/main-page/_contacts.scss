@@ -1,0 +1,210 @@
+.contacts__section {
+    background-color:  #84A178;
+    padding-bottom: 40px;
+    @include tablet {
+     padding-bottom: 40px;
+    }
+    @include desktop {
+     padding-bottom: 120px;
+    }
+}
+
+.contacts__container {
+    margin-top: 300px;
+}
+
+.contacts__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 19.25px;
+    margin-bottom: 32px;
+    @include mobile {
+        align-items: center;
+    }
+    @include tablet {
+      flex-direction: row;  
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+    @include desktop {
+        flex-direction: row;  
+        gap: 32px;
+        margin-bottom: 64px; 
+    }
+}
+
+.contacts__item {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 412px;
+    background-color: #FCFCFC;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    padding: 40px 32px; 
+    @include tablet {
+      width: 224px;
+      height: 528px; 
+      padding: 40px 24px;
+    }
+    @include desktop {
+        width: 368px;
+        height: 538px; 
+        padding: 40px 40px;
+    }
+}
+
+.contacts__category {
+    display: flex;
+    max-width: 130px;
+    height: 16px;
+    background-color: #F8D24E;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 186%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center; 
+    padding-left: 50px;
+    padding-right: 50px;
+     
+    @include tablet {
+        min-width: 73px;
+        max-width: 138px;
+        height: 28px;
+        border-radius: 6px;
+        margin-bottom: 32px;
+    }
+    @include desktop {
+        font-size: 16px;
+        min-width: 75px;
+        max-width: 138px;
+        margin-left: 0;
+    }
+}
+
+.contacts__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 186%;
+    color: #131313; 
+    @include tablet {
+        font-size: 14px;
+    }  
+    @include desktop {
+        font-size: 16px;
+    }
+}
+
+.contacts__address {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 183%;
+    color: #D6936D;
+    position: relative;
+    margin-top: 8px;
+    @include tablet  {
+        font-size: 14px;
+        margin-top: 12px;
+    }
+    @include desktop {
+        font-size: 16px;
+    }
+}
+
+.contacts__description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 186%;
+    color: #ABABAB;
+    @include tablet  {
+        font-size: 14px;
+    }
+    @include desktop {
+        font-size: 16px;
+    }
+}
+
+.contacts__contact {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #131313;
+    @include desktop {
+        font-size: 16px;
+    }
+}
+
+.line{
+    border: 0.5px solid #E1E1E1;
+    width: 216px;
+    margin-bottom: 24px;
+    margin-top: 24px; 
+    @include tablet {
+        width: 176px;
+        margin: 32px 0;
+        align: center;
+    }  
+    @include desktop {
+        width: 288px;
+        align: center;
+    }
+}
+
+.button-locations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 196px;
+    height: 42px;
+    &:focus {
+        background-color: #F8D24E;
+        color: #131313;
+        border-color: #F8D24E;
+      }
+      &:hover {
+        background-color: #F8D24E;
+        color: #131313;
+        border-color: #F8D24E;
+      }
+}
+
+.button-franchise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 196px;
+    height: 42px;
+    
+    &:focus {
+        background-color: #F8D24E;
+        color: #131313;
+        border-color: #F8D24E;
+      }
+      &:hover {
+        background-color: #F8D24E;
+        color: #131313;
+        border-color: #F8D24E;
+      }
+}
+
+.button__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    @include tablet {
+        flex-direction: row;
+        align-content: center;
+    }
+    
+}
+
+.btn-ico__icon {  
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
