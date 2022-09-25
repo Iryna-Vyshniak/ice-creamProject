@@ -1,0 +1,40 @@
+.locations__window {
+  width: 568px;
+  height: 458px;
+
+  min-height: auto;
+  max-width: none;
+
+  padding: 32px 60px;
+}
+
+.locations__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.locations__ico-svg {
+  position: static;
+  transform: translate(0);
+}
+
+.locations__title {
+  @include fonts(400, 20, 1.4);
+  text-align: center;
+  color: $dark-color;
+
+  margin-bottom: 32px;
+}
+
+.locations__map-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 145px;
+  height: 42px;
+  @include fonts(600, 14, 1.2);
+  color: $dark-color;
+
+  margin: 32px auto 0;
+}
