@@ -1,10 +1,6 @@
 <header class="header">
   <div class="container header__container">
-    <!-- <div class="header__wrap-centered"> -->
     <a class="header__logo logo" href="./index.html">
-      <!-- <svg width="40" height="37">
-        <use class="icon-logo" href="./images/icons/icons.svg#icon-logo"></use>
-      </svg> -->
       <picture>
         <source
           srcset="
@@ -24,8 +20,8 @@
         />
         <source
           srcset="
-            ./images/hero/logo-ice-mob-min-min.png 1x,
-            ./images/hero/logo-ice-mob@2x-min.png  2x
+            ./images/hero/logo-ice-mob-min.png    1x,
+            ./images/hero/logo-ice-mob@2x-min.png 2x
           "
           media="(min-width: 320px)"
           width="40"
@@ -111,19 +107,11 @@
         </svg>
       </button>
     </div>
-    <!-- </div> -->
 
     <div class="mobile-menu is-hidden">
       <div class="mobile-menu__container">
         <div class="mobile-menu__top">
           <a class="header__logo logo" href="./index.html">
-            <!-- <svg width="40" height="37">
-              <use
-                class="icon-logo"
-                href="./images/icons/icons.svg#icon-logo"
-              ></use>
-            </svg> -->
-
             <picture>
               <source
                 srcset="
@@ -143,8 +131,8 @@
               />
               <source
                 srcset="
-                  ./images/hero/logo-ice-mob-min-min.png 1x,
-                  ./images/hero/logo-ice-mob@2x-min.png  2x
+                  ./images/hero/logo-ice-mob-min.png    1x,
+                  ./images/hero/logo-ice-mob@2x-min.png 2x
                 "
                 media="(min-width: 320px)"
                 width="40"
@@ -230,114 +218,16 @@
   </div>
 </header>
 
-<!-- ONE NAVIGATION -->
-
-<!-- <header class="header">
-  <div class="container header__container">
-  
-    <nav class="mobile-nav">
-      <a class="logo" href="./index.html">
-        <svg class="site-logo" width="40" height="37">
-          <use
-            class="icon-logo"
-            href="./images/icons/icons.svg#icon-logo"
-          ></use>
-        </svg>
-      </a>
-
-      <button
-        type="button"
-        class="mobile-menu__button"
-        aria-expanded="false"
-        aria-controls="menu-container"
-        data-menu-button
-      >
-        <svg
-          class="mobile-icons"
-          width="32"
-          height="32"
-          aria-label="switch mobile menu"
-        >
-          <use
-            class="icon-burger"
-            href="./images/icons/icons.svg#icon-burger"
-          ></use>
-          <use
-            class="icon-close"
-            href="./images/icons/icons.svg#icon-modal-close"
-          ></use>
-        </svg>
-      </button>
-
-      <div class="mobile-menu__container" id="menu-container" data-menu>
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a
-                href="./index.html"
-                class="navigation__link current"
-                aria-label="link to home section"
-                >Home</a
-              >
-            </li>
-            <li class="navigation__item">
-              <a
-                href="#gallery"
-                class="navigation__link"
-                aria-label="link to gallery section"
-                >About us</a
-              >
-            </li>
-            <li class="navigation__item">
-              <a
-                href="#about"
-                class="navigation__link"
-                aria-label="link to about us section"
-                >How it`s made?</a
-              >
-            </li>
-            <li class="navigation__item">
-              <a
-                href="#products"
-                class="navigation__link"
-                aria-label="link to products section"
-                >Our products</a
-              >
-            </li>
-            <li class="navigation__item">
-              <a
-                href="#contacts"
-                class="navigation__link"
-                aria-label="link to contacts section"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </nav>
-
-        <button
-          type="button"
-          class="navigation__btn btn btn--color-light"
-          data-modal-open
-        >
-          Buy now
-          <svg class="btn-vector" width="12" height="12">
-            <use
-              class="icon-logo"
-              href="./images/icons/icons.svg#icon-frame-next"
-            ></use>
-          </svg>
-        </button>
-      </div>
-    </nav>
-  </div>
-</header> -->
+<!-- MODAL -->
 
 <div class="backdrop is-hidden" data-modal>
   <div class="modal">
     <button class="modal__button-close button" data-modal-close>
       <svg class="modal__icon-close" width="20" height="20">
-        <use href="#"></use>
+        <use
+          class="mobile-modal__icon-cross"
+          href="./images/icons/icons.svg#icon-modal-close"
+        ></use>
       </svg>
     </button>
   </div>

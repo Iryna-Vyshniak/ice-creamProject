@@ -95,6 +95,8 @@
 
 
 .mobile-menu__button {
+    position: relative;
+    z-index: 5;
     display: inline-flex;
     margin: 0;
     padding: 0;
@@ -116,6 +118,7 @@
 
     @include tablet {
         position: relative;
+        z-index: 6;
         min-width: 152px;
         height: 42px;
         display: block;
@@ -191,8 +194,6 @@
     }
 }
 
-
-
 .mobile-menu__container {
     display: flex;
         flex-direction: column;
@@ -204,18 +205,12 @@
 .mobile-menu__top {
     display: flex;
     align-items: center;
-    margin-bottom: 52px;
+    justify-content: space-between;
     min-height: 80px;
+    margin-bottom: 52px;
     @include tablet {
         margin-bottom: 76px;
     }
-}
-
-
-
-.menu-close {
-    margin-left: auto;
-    display: block;
 }
 
 .mobile-menu__icon-burger {
@@ -238,8 +233,11 @@
 .mobile-menu__cross:hover > .mobile-menu__icon-cross {
     fill: $accent-color;
     stroke: $accent-color;
-    @include transition();
-    transition-property: fill;
+            transform: rotate(360deg);
+            transform-origin: center;
+            @include transition();
+            transition-property: fill, transform;
+   
 }
 
 
@@ -324,317 +322,11 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-// ONE NAVIGATION
-
-// .header {
-//     position: absolute;
-//     width: 100%;
-//     padding-top: 12px;
-//     padding-bottom: 12px;
-
-//     @include tablet {
-//         padding-top: 20px;
-//         padding-bottom: 20px;
-//     }
-
-//     @include desktop {
-//         padding-top: 8px;
-//         padding-bottom: 8px;
-//     }
-// }
-
-// .header__container {
-//     position: relative;
-//     padding-right: 20px;
-//     padding-left: 20px;
-
-//     @include tablet {
-//         align-items: center;
-//         padding-right: 32px;
-//         padding-left: 32px;
-//     }
-// }
-
-// .mobile-nav {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-// }
-
-// .site-logo {
-//     width: 40px;
-//     height: 37px;
-
-//     @include tablet {
-//         width: 48px;
-//         height: 44px;
-//     }
-
-//     @include desktop {
-//         width: 60px;
-//         height: 65px;
-//     }
-// }
-
-// .mobile-menu__button {
-//     position: relative;
-//     display: inline-flex;
-//     margin-left: auto;
-//     padding: 0;
-//     background-color: transparent;
-//     border: none;
-//     fill: $light-color;
-//     stroke: $light-color;
-
-//     & .icon-burger {
-//         display: block;
-//     }
-
-//     & .icon-close {
-//         display: none;
-//     }
-
-//     @include tablet {
-//         position: absolute;
-//         top: 32%;
-//         right: 22%;
-//         z-index: 5;
-//         margin-right: 32px;
-
-//         .icon-close {
-//             margin-right: 0;
-//             position: absolute;
-//             top: 32%;
-//             right: 0;
-//             z-index: 5;
-
-//         }
-//     }
-
-//     @include desktop {
-//         display: none;
-//     }
-// }
-
-// .mobile-menu__button.is-open {
-//     & .icon-close {
-//         display: block;
-//     }
-
-//     & .icon-burger {
-//         display: none;
-//     }
-// }
-
-// .mobile-icons:focus > .icon-burger,
-// .mobile-icons:hover > .icon-burger {
-//     stroke: $accent-color;
-//     @include transition();
-//     transition-property: stroke;
-// }
-
-// .mobile-icons:focus > .icon-close,
-// .mobile-icons:hover > .icon-close {
-//     fill: $accent-color;
-//     transform: rotate(360deg);
-//     transform-origin: center;
-//     @include transition();
-//     transition-property: fill, transform;
-// }
-
-
-// .mobile-menu__container {
-//     background-color: $mobile-menu-bg;
-
-//     @include max-mobile {
-//         display: none;
-//         position: absolute;
-//         top: 100%;
-//         left: 0;
-//         width: 100%;
-//         min-height: 100vh;
-//         z-index: 6;
-
-//         &.is-open {
-//             display: flex;
-//             flex-direction: column;
-//             align-items: center;
-//             justify-content: space-around;
-//         }
-//     }
-
-//     @include min-max-tablet {
-//         position: absolute;
-//         top: 27%;
-//         right: 3%;
-//         display: block;
-
-//         &.is-open {
-//             position: absolute;
-//             top: 100%;
-//             left: 0;
-//             max-width: 100vw;
-//             width: 100%;
-//             min-height: 100vh;
-//             z-index: 6;
-
-//             display: flex;
-//             flex-direction: column;
-//             align-items: center;
-//             justify-content: space-around;
-
-//             .main-nav__button {
-//                 margin: 0;
-//             }
-
-//             .main-nav {
-//                 display: block;
-//             }
-//         }
-//     }
-
-//     @include desktop {
-//         display: flex;
-//         justify-content: space-between;
-//     }
-// }
-
-// .main-nav {
-//     @include tablet {
-//         display: none;
-//     }
-
-//     @include desktop {
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         flex: 1 0 auto;
-//     }
-// }
-
-// .main-nav__list {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-
-//     @include desktop {
-//         display: flex;
-//         flex-direction: row;
-//         margin: 0 auto;
-//         z-index: 2;
-//     }
-// }
-
-// .main-nav__item {
-//     margin-bottom: 0;
-// }
-
-// .main-nav__item:not(:last-child) {
-//     @include mobile {
-//         margin-bottom: 32px;
-//     }
-
-//     @include max-tablet {
-//         margin-bottom: 40px;
-//     }
-
-//     @include desktop {
-//         margin: 0;
-//         margin-right: 27px;
-//     }
-// }
-
-// .main-nav__link {
-//     @include transition();
-//     transition-property: color;
-//     @include fonts(700, 32, 1.2);
-//     color: $light-color;
-
-//     &:focus,
-//     &:hover {
-//         color: $dark-color;
-//     }
-
-//     @include tablet {
-//         @include fonts(700, 48, 1.2);
-//     }
-
-//     @include desktop {
-//         display: flex;
-//         align-items: center;
-//         @include fonts(700, 16, 1.25);
-//         color: $light-color;
-
-//         &:focus,
-//         &:hover {
-//             color: $accent-color;
-//         }
-//     }
-// }
-
-
-// .main-nav__btn {
-//     position: relative;
-//     min-width: 152px;
-//     height: 42px;
-
-//     @include tablet {
-//         display: block;
-
-//         .mobile-menu__container.is-open {
-//             display: none;
-//         }
-
-//     }
-
-//     @include desktop {
-//         display: block;
-//         margin-left: 190px;
-//     }
-// }
-
-// .btn-vector {
-//     position: absolute;
-//     top: 35%;
-//     right: 11%;
-//     width: 12px;
-//     height: 12px;
-//     fill: transparent;
-//     stroke: currentColor;
-
-//     .main-nav__btn:hover & {
-//         stroke: currentColor;
-//         @include transition();
-//         transition-property: stroke;
-//     }
-
-//     .main-nav__btn:focus & {
-//         // stroke: $light-color;
-//         stroke: currentColor;
-//         @include transition();
-//         transition-property: stroke;
-//     }
-// }
-
-
-
-
 // MODAL
 .backdrop {
     position: fixed;
     top: 0;
-    z-index: 5;
+    z-index: 7;
     width: 100%;
     height: 100%;
     background-color: #aeacab5f;
@@ -647,7 +339,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 3;
+    z-index: 8;
 
     max-width: 500px;
     width: 100%;
@@ -681,6 +373,7 @@
 
 .modal__button-close {
     position: absolute;
+    z-index: 9;
     top: 10px;
     right: 10px;
     padding: 0;
@@ -691,29 +384,28 @@
     border-width: 1px;
     border-style: solid;
     border-color: $light-color;
-    @include transition();
-    transition-property: border-color, background-color;
+
 }
 
-.modal__button-close:focus,
-.modal__button-close:hover {
-    border-color: $accent-color;
-    background-color: $accent-color;
+.modal__icon-close:focus > .mobile-modal__icon-cross,
+.modal__icon-close:hover > .mobile-modal__icon-cross {
+    fill: $accent-color;
+    @include transition();
+    transition-property: fill;
+
 }
 
 .modal__icon-close {
     position: absolute;
+    z-index: 10;
     top: 50%;
     left: 50%;
     transform: translate(-45%, -45%);
 
     width: 20px;
     height: 20px;
+}
 
-    .modal__button-close:focus > &,
-    .modal__button-close:hover > & {
-        fill: $accent-color;
-        @include transition();
-        transition-property: fill;
-    }
+.mobile-modal__icon-cross{
+    fill: $dark-color;
 }
