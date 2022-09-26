@@ -1,0 +1,70 @@
+<div class="backdrop is-hidden" data-modal>
+    <div class="franchise-modal modal">
+    <button class="modal__button-close" data-modal-close>
+        <svg class="modal__icon-close" width="20" height="20">
+            <use href=""
+            width="11" height ="11">
+            </use>
+        </svg>
+    </button>
+    <p class="franchise-modal__title">Thank you for your interest in owning an Ice Cream shop
+        </p>
+        <p class="franchise-modal__description">
+            Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once the application process resumes, we will contact you for further information. Please fill out the contact information below and we will reach out for additional information. We appreciate your patience.
+        </p>
+    <form class="modal__form">
+        <ul>
+        <li class="modal__field">
+            <label for ="user-name"></label>
+                <input 
+                type="text" 
+                name="user-name" 
+                class="modal__input"
+                id="user-name"
+                placeholder="Name"
+                minlength="2"
+                required
+                />
+        </li>
+        <li class="modal__field">
+            <label for ="user-phone"></label>
+          <div class="modal__wrap">
+                <input 
+                type="tel" 
+                name="user-phone" 
+                class="modal__input"
+                id="user-phone"
+                placeholder="Phone"
+                required
+                />
+          </div>
+        </li>
+        <li class="modal__field">
+            <label for ="user-mail"></label>
+          <div class="modal__wrap">
+                <input 
+                type="mail" 
+                name="user-mail" 
+                class="modal__input"
+                id="user-mail"
+                placeholder="Mail"
+                required
+                />  
+          </div>
+        </li>
+    </ul>
+        <label for ="user-text" class="modal__label" >Comment</label>
+        <textarea 
+        type="text" 
+        name="user-text" 
+        class="modal__text"
+        id="user-text"
+        placeholder="Comment"
+        required
+        ></textarea>
+    </label>
+    
+        <button type="submit" class="submit__button" >Submit</button>
+    </form>
+    </div>
+      </div>
