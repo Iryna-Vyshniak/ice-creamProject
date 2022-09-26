@@ -25,6 +25,7 @@
     border-style: solid;
     border-color: $accent-color;
     border-radius: 10px;
+    background-color: $light-color;
     transform: translate(-50%, -50%);
     @include transition();
     transition-property: min-height;
@@ -42,7 +43,7 @@
     pointer-events: none;
 }
 
-.backdrop.is-hidden .modal-read {
+.backdrop-modal-read.is-hidden .modal-read {
     transform: translate(-50%, -50%);
     min-height: 0;
 }
@@ -55,6 +56,7 @@
     right: 10px;
     padding: 0;
     margin: 0;
+    margin-bottom: 5px;
     @include circle(25, 25, 50%);
 
     background: transparent;
@@ -64,8 +66,8 @@
 
 }
 
-.modal__icon-close:focus > .modal-read__icon-cross,
-.modal__icon-close:hover > .modal-read__icon-cross {
+.modal-read__icon-close:focus > .modal-read__icon-cross,
+.modal-read__icon-close:hover > .modal-read__icon-cross {
     fill: $accent-color;
     @include transition();
     transition-property: fill;
@@ -87,47 +89,68 @@
     fill: $dark-color;
 }
 
+.modal-read__centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .modal-read__title {
-        @include fonts(null, 16, 1.5);
-        text-align: center;
-        text-transform: none;
-        @include desktop{
-            @include fonts(null, 20, 1.4);
-        }
-    }
-    .modal-read__video {
-        border: none;
-        border-radius: 10px;
-        max-width: 224px;
-        width: 100%;
-        height: 199px;
-        @include desktop{
-            max-width: 448px;
-            width: 100%;
-            height: 205px;
-        }
-    }
+.modal-read__title {
+    margin-bottom: 20px;
+    @include fonts(null, 16, 1.5);
+    text-align: center;
+    text-transform: none;
 
-    .modal-read__video--mobile{
+    @include desktop {
+        margin-bottom: 34px;
+        @include fonts(null, 20, 1.4);
+    }
+}
+
+.modal-read__video {
+    display: none;
+    max-width: 224px;
+    width: 100%;
+    height: 199px;
+
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: $dark-color;
+
+    @include desktop {
         display: block;
-        @include desktop{
-            display: none;
-        }
+        margin-bottom: 32px;
+        max-width: 448px;
+        width: 100%;
+        height: 205px;
     }
+}
 
-    .modal-read__video--desktop{
+.modal-read__video--mobile {
+    display: block;
+
+    @include desktop {
         display: none;
-        @media desktop{
-            display: block;
-        }
     }
+}
 
-    .modal-read__text {
-        @include fonts(null, 14, 1.4);
-        color: $dark-color;
-        @include desktop{
-            @include fonts(null, 16, 1.4);
-        }
+.modal-read__video--desktop {
+    display: none;
+
+    @media desktop {
+        display: block;
     }
+}
 
+.modal-read__text {
+    max-width: 224px;
+    @include fonts(null, 14, 1.4);
+    text-align: justify;
+    color: $dark-color;
+
+    @include desktop {
+        max-width: 448px;
+        @include fonts(null, 16, 1.4);
+    }
+}

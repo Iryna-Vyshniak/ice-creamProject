@@ -104,7 +104,6 @@
 	}
 }
 
-
 @keyframes textclip {
 	to {
 		background-position: 250% center;
@@ -304,6 +303,7 @@
 }
 
 .hero__image {
+	position: relative;
 	@include max-mobile {
 		position: absolute;
 		bottom: -6.4%;
@@ -325,4 +325,40 @@
 		z-index: 5;
 	}
 
+&::after {
+	position: absolute;
+	top: 15px;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	content: "";
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	transform: scale(0.6) translateZ(0);
+	filter: blur(50px);
+	background: linear-gradient(to left,
+			#ffcb10,
+			#F8D24E,
+			#f2d97f,
+			#FCFCFC,
+			#FCFCFC,
+			#FCFCFC,
+			#c0f2ad,
+			#94f96f,
+			#87f85e);
+	background-size: 200% 200%;
+	animation: animateGlow 2500ms linear infinite;
 }
+}
+
+@keyframes animateGlow {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	100% {
+		background-position: 200% 50%;
+	}
+}
+

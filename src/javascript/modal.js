@@ -7,6 +7,7 @@
     closeMobileBtn: document.querySelector('[data-mobile-close]'),
     // closeModalReadBtn: document.querySelector('[data-modal-read-close]'),
     modal: document.querySelector('[data-modal]'),
+    // modal: document.querySelector('[data-read-modal]'),
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
