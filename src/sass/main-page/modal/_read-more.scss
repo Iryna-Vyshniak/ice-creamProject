@@ -1,0 +1,133 @@
+.backdrop-modal-read {
+    position: fixed;
+    top: 0;
+    z-index: 7;
+    width: 100%;
+    height: 100%;
+    background-color: #aeacab5f;
+    @include transition ();
+    transition-property: opacity, visibility;
+}
+
+.modal-read {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+
+    max-width: 280px;
+    width: 100%;
+    min-height: 459px;
+    padding: 28px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: $accent-color;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    @include transition();
+    transition-property: min-height;
+
+    @include desktop {
+        max-width: 568px;
+        min-height: 449px;
+        width: 100%;
+    }
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal-read {
+    transform: translate(-50%, -50%);
+    min-height: 0;
+}
+
+
+.modal-read__button-close {
+    position: absolute;
+    z-index: 9;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    margin: 0;
+    @include circle(25, 25, 50%);
+
+    background: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $light-color;
+
+}
+
+.modal__icon-close:focus > .modal-read__icon-cross,
+.modal__icon-close:hover > .modal-read__icon-cross {
+    fill: $accent-color;
+    @include transition();
+    transition-property: fill;
+
+}
+
+.modal-read__icon-close {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -45%);
+
+    width: 20px;
+    height: 20px;
+}
+
+.modal-read__icon-cross {
+    fill: $dark-color;
+}
+
+
+    .modal-read__title {
+        @include fonts(null, 16, 1.5);
+        text-align: center;
+        text-transform: none;
+        @include desktop{
+            @include fonts(null, 20, 1.4);
+        }
+    }
+    .modal-read__video {
+        border: none;
+        border-radius: 10px;
+        max-width: 224px;
+        width: 100%;
+        height: 199px;
+        @include desktop{
+            max-width: 448px;
+            width: 100%;
+            height: 205px;
+        }
+    }
+
+    .modal-read__video--mobile{
+        display: block;
+        @include desktop{
+            display: none;
+        }
+    }
+
+    .modal-read__video--desktop{
+        display: none;
+        @media desktop{
+            display: block;
+        }
+    }
+
+    .modal-read__text {
+        @include fonts(null, 14, 1.4);
+        color: $dark-color;
+        @include desktop{
+            @include fonts(null, 16, 1.4);
+        }
+    }
+
