@@ -1,0 +1,55 @@
+<div class="modal-order backdrop">
+    
+    <div class="buy-now">
+
+        <button class="modal__button-close" data-modal-close>
+            <svg width="16px" height="16px">
+                <use href="images/icons/icons.svg#icon-modal-close"></use>
+            </svg>
+        </button>
+
+        <p class="buy-now__header">
+            Buy now
+        </p>
+        <ul class="order-list">
+            <li class="order__item order--green-border">
+                <p class="order__name">
+                    ice cream
+                </p>
+            </li>
+            <li class="order__item order--yellow-border">
+                <p class="order__name">
+                    ice coffee
+                </p>
+            </li>
+            <li class="order__item order--brown-border">
+                <p class="order__name">
+                    milkshake
+                </p>
+            </li>
+        </ul>
+        
+        <form class="order__form">
+            <div class="order__input-wrapper">
+                <input  class="order__input"
+                        type="text"
+                        name="order__name"
+                        placeholder="Name"
+                        id="order__name"
+                        required
+                >
+                <input  class="order__input"
+                        type="tel"
+                        name="order__tel"
+                        placeholder="Phone"
+                        id="order__tel"
+                        required
+                >
+                <textarea class="order__textarea" name="order__textarea" id="order__textarea" rows="4" placeholder="Comment"></textarea>
+                
+                <button class="order__submit-btn btn" type="submit">Submit</button>
+            </div>
+        </form>
+        
+    </div>
+</div>
