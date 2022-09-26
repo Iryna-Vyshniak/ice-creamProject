@@ -1,8 +1,8 @@
-<div class="backdrop-modal-read is-hidden">
-  <!-- <div class="backdrop-modal-read is-hidden" data-modal> -->
+<!-- <div class="backdrop-modal-read is-hidden"> -->
+<div class="backdrop-modal-read is-hidden" data-read-modal>
   <div class="modal-read">
-    <button class="modal-read__button-close button">
-      <!-- <button class="modal-read__button-close button" data-modal-read-close> -->
+    <!-- <button class="modal-read__button-close button"> -->
+    <button class="modal-read__button-close button" data-modal-read-close>
       <svg class="modal-read__icon-close" width="20" height="20">
         <use
           class="modal-read__icon-cross"
@@ -10,36 +10,38 @@
         ></use>
       </svg>
     </button>
-    <p class="modal-read__title title title--dark">How it’s made?</p>
-    <video
-      controls
-      muted
-      loop
-      preload="auto"
-      poster="./videos/poster.jpg"
-      class="modal-read__video modal-read__video--mobile"
-    >
-      <source type="video/webm" src="./videos/ice-cream-production.webm" />
-      <source type="video/mp4" src="./videos/ice-cream-production.mp4" />
-    </video>
 
-    <video
-      controls
-      muted
-      loop
-      preload="auto"
-      poster="./videos/poster.jpg"
-      class="modal-read__video modal-read__video-desktop"
-    >
-      <source type="video/webm" src="./videos/production.webm" />
-      <source type="video/mp4" src="./videos/production.mp4" />
-    </video>
-    <p class="modal-read__text">
-      Ice is a family-owned, small business started in March of 2022 by the
-      owner, George Kolaitis. Every flavor is homemade by the owner himself! The
-      Ice offers a variety of over 40 flavors. We make delicious sundaes, banana
-      splits, floats, and a mean chocolate soda. We also make our milkshakes
-      with your choice of ANY homemade ice cream flavor!
-    </p>
+    <div class="modal-read__centered">
+      <p class="modal-read__title title title--dark">How it’s made?</p>
+      <video
+        controls
+        muted
+        loop
+        preload="auto"
+        poster="./videos/poster.jpg"
+        class="modal-read__video modal-read__video--mobile"
+      >
+        <source type="video/webm" src="./videos/ice-cream-production.webm" />
+        <source type="video/mp4" src="./videos/ice-cream-production.mp4" />
+      </video>
+      <video
+        controls
+        muted
+        loop
+        preload="auto"
+        poster="./videos/poster.jpg"
+        class="modal-read__video modal-read__video-desktop"
+      >
+        <source type="video/webm" src="./videos/production.webm" />
+        <source type="video/mp4" src="./videos/production.mp4" />
+      </video>
+      <p class="modal-read__text">
+        Ice is a family-owned, small business started in March of 2022 by the
+        owner, George Kolaitis. Every flavor is homemade by the owner himself!
+        The Ice offers a variety of over 40 flavors. We make delicious sundaes,
+        banana splits, floats, and a mean chocolate soda. We also make our
+        milkshakes with your choice of ANY homemade ice cream flavor!
+      </p>
+    </div>
   </div>
 </div>
