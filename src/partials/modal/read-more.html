@@ -1,6 +1,8 @@
-<div class="backdrop-modal-read is-hidden" data-modal>
+<div class="backdrop-modal-read is-hidden">
+  <!-- <div class="backdrop-modal-read is-hidden" data-modal> -->
   <div class="modal-read">
-    <button class="modal-read__button-close button" data-modal-read-close>
+    <button class="modal-read__button-close button">
+      <!-- <button class="modal-read__button-close button" data-modal-read-close> -->
       <svg class="modal-read__icon-close" width="20" height="20">
         <use
           class="modal-read__icon-cross"
@@ -15,36 +17,21 @@
       loop
       preload="auto"
       poster="./videos/poster.jpg"
-      class="modal-read__video"
+      class="modal-read__video modal-read__video--mobile"
     >
-      <source
-        type="video/webm"
-        src="./videos/ice-cream-production.webm"
-        media="screen and (min-width:1200px)"
-        width="448"
-        height="205"
-      />
-      <source
-        type="video/mp4"
-        src="./videos/ice-cream-production.mp4"
-        media="screen and (min-width:1200px)"
-        width="448"
-        height="205"
-      />
-      <source
-        type="video/webm"
-        src="./videos/production.webm"
-        media="screen and (max-width: 1199.98px)"
-        width="224"
-        height="199"
-      />
-      <source
-        type="video/mp4"
-        src="./videos/production.mp4"
-        media="screen and (max-width: 1199.98px)"
-        width="224"
-        height="199"
-      />
+      <source type="video/webm" src="./videos/ice-cream-production.webm" />
+      <source type="video/mp4" src="./videos/ice-cream-production.mp4" />
+    </video>
+    <video
+      controls
+      muted
+      loop
+      preload="auto"
+      poster="./videos/poster.jpg"
+      class="modal-read__video modal-read__video-desktop"
+    >
+      <source type="video/webm" src="./videos/production.webm" />
+      <source type="video/mp4" src="./videos/production.mp4" />
     </video>
     <p class="modal-read__text">
       Ice is a family-owned, small business started in March of 2022 by the
