@@ -1,0 +1,199 @@
+// загальний клас претайтл
+.pre-title {
+    font-family: 'Montserrat', sans-serif;
+    @include fonts(700, 18, 1.22, 0.04em);
+    text-transform: uppercase;
+    text-align: center;
+
+    @include tablet {
+        @include fonts(800, 22, 1.23, 0.04em);
+    }
+
+    @include desktop {
+        @include fonts(800, 30, 1.23, 0.04em);
+    }
+}
+
+.pre-title--light{
+    color: $light-color;
+}
+
+.pre-title--dark {
+    color: $dark-color;
+}
+
+//   загальна кнопка з іконкою
+
+.btn-ico {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 164px;
+    height: 42px;
+    cursor: pointer;
+  
+    font-family: inherit;
+    @include fonts(600, 14, 1.29, 0.04em);
+    
+    border-radius: 10px;
+    color: $dark-color;
+    background-color: $btn-light-border-color;
+
+    &__icon {
+        stroke: $dark-color;
+    }
+  
+    &:focus {
+      color: $light-btn-color;
+      stroke: $light-btn-color;
+      background-color: $btn-dark-border-color;
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $btn-dark-border-color;
+      color: $dark-color;
+    }
+  }
+  
+
+// About
+
+
+.about {
+    background-color: $hero-bg;
+        padding-bottom: 42px;
+    @include tablet {
+        padding-bottom: 48px;
+    }
+    @include desktop {
+        padding-bottom: 60px;
+    }
+    
+    &-pre-title {
+            margin-bottom: 12px;  
+        }
+    
+
+    &-title {
+            margin-bottom: 32px;
+        @include tablet {
+            margin-bottom: 72px;
+        }
+        @include desktop {
+            margin-bottom: 82px;
+        }
+
+    }
+}
+
+.about > .container {
+        padding-left: 21px;
+        padding-right: 20px;
+    @include tablet {
+        padding-left: 33px;
+        padding-right: 32px;
+    }
+    @include desktop {
+        padding-left: 18px;
+        padding-right: 121px;
+    }
+}
+
+.about-main {
+
+    @include tablet {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        margin-bottom: 0;
+    }
+    @include desktop {
+        gap: 100px;
+    }
+}
+
+.about__picture {
+    display: block;
+
+        height: auto;
+        // & > img {max-width: 100%}
+    @media screen and (min-width: 480px) {
+        max-width: auto;
+        width: auto;
+    }
+    margin-bottom: 40px;
+
+    @include tablet {
+        max-width: 375px;
+        margin-bottom: 0;
+    }
+    @include desktop {
+        max-width: 546px;
+    }
+
+    & > img {
+        @media screen and (max-width: 767.98px) {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+    
+}
+
+.about-text {
+    color: $light-color;
+    font-size: 12px;
+    line-height: 1.62;
+
+    &:not(:last-of-type) {
+        margin-bottom: 4px;
+    }
+
+    &:last-of-type {    
+        margin-bottom: 20px;
+    }
+
+
+    @include tablet {
+        line-height: 1.76;
+        &:not(:last-of-type) {
+            margin-bottom: 8px;
+        }
+        &:last-of-type {
+            margin-bottom: 48px;
+        }
+    }
+
+    @include desktop {
+        font-size: 16px;
+        letter-spacing: 0.04em;
+        &:not(:last-of-type) {
+            margin-bottom: 8px;
+        }
+        &:last-of-type {
+            margin-bottom: 48px;
+        }
+        
+    }
+
+}
+
+.btn-ico__use {
+    fill: transparent;
+    stroke: currentColor;
+}
+
+.about__btn.btn-ico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    @media screen and (max-width: 767.98px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
