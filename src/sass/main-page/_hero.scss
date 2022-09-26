@@ -3,7 +3,7 @@
 }
 
 .hero__container {
-    position: relative;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	// width: 100%;
@@ -11,11 +11,11 @@
 	margin-left: auto;
 	padding: 0 20px;
 
-	@include max-mobile{
-	width: 328px;
-	min-height: 502px;
+	@include max-mobile {
+		width: 328px;
+		min-height: 502px;
 	}
-	
+
 	@include tablet {
 		width: 768px;
 		min-height: 415px;
@@ -80,7 +80,7 @@
 	text-align: left;
 	flex-shrink: 1;
 	@include fonts(null, 26, 1.26, 0.04em);
-	
+
 	background: linear-gradient(to right, #F8D24E 10%, #FCFCFC 50%, #b5f49e 60%);
 	background-size: auto auto;
 	background-clip: border-box;
@@ -94,10 +94,11 @@
 
 	margin-bottom: 28px;
 
-	@include tablet{
+	@include tablet {
 		@include fonts(null, 16.2531, 1.2);
 	}
-	@include desktop{
+
+	@include desktop {
 		@include fonts(null, 38, 1.2, 0.04);
 		margin-bottom: 32px;
 	}
@@ -113,13 +114,15 @@
 
 .hero__title-big {
 	flex-shrink: 1;
-    @include fonts(null, 26, 1.26, 0.04em);
-	@include tablet{
-	@include fonts(null, 18, 1.2);
-}
-@include desktop {
-	@include fonts(null, 38, 1.2, 0.04);
-}
+	@include fonts(null, 26, 1.26, 0.04em);
+
+	@include tablet {
+		@include fonts(null, 18, 1.2);
+	}
+
+	@include desktop {
+		@include fonts(null, 38, 1.2, 0.04);
+	}
 
 }
 
@@ -127,38 +130,46 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-
-	.hero__button:not(:last-child) {
-		margin-right: 8px;
-	}
 }
 
 .hero__button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 	min-width: 62px;
 	height: 24px;
+
+    padding: 8px 14px;
 	border-radius: 8px;
-	padding: 8px;
 	@include fonts(600, 8, 1.25);
+
+	@include desktop {
+		min-width: 134px;
+		height: 42px;
+		padding: 12px 34px;
+		border-radius: 10px;
+		@include fonts(600, 14, 1.2);
+	}
+
+	&:not(:last-child) {
+		margin-right: 8px;
+		@include desktop {
+			margin-right: 12px;
+		}
+	}
 
 	&:nth-child(even) {
 		text-decoration: underline;
 		background-color: transparent;
 		border: none;
 		color: $accent-color;
-
 		&:focus {
 			color: $light-btn-color;
 		}
-
 		&:hover {
 			color: $btn-dark-border-color;
 		}
-	}
-	@include desktop{
-		@include fonts(600, 14, 1.2);
 	}
 }
 
@@ -193,7 +204,7 @@
 	@include tablet {
 		@include fonts(null, 8, 1.2);
 
-		&:not(last-child) {
+		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
 	}
@@ -201,7 +212,7 @@
 	@include desktop {
 		@include fonts(null, 14, 1.2);
 
-		&:not(last-child) {
+		&:not(:last-child) {
 			margin-bottom: 16px;
 		}
 	}
@@ -210,26 +221,23 @@
 .hero__wrap-plate {
 	display: flex;
 	align-items: flex-end;
-    display: flex;
+	display: flex;
 
 	@include tablet {
-	position: absolute;
+		position: absolute;
 		bottom: 3%;
 		left: 5%;
 		gap: 33px;
 	}
 
 	@include desktop {
-	position: absolute;
-    left: 2%;
-    bottom: 8%;
-	gap: 14px;
-	z-index: 5;
-    
+		position: absolute;
+		left: 2%;
+		bottom: 8%;
+		gap: 14px;
+		z-index: 5;
+	}
 }
-		
-}
-
 
 .hero__ad {
 	display: none;
@@ -245,9 +253,10 @@
 	}
 }
 
-.hero__plate-img{
+.hero__plate-img {
 	display: none;
-	@include tablet{
+
+	@include tablet {
 		display: block;
 	}
 }
@@ -292,54 +301,21 @@
 	width: 2.5625em;
 	@include transition();
 	transition-property: width;
-	;
 }
 
-
-
-// .hero__image {
-// 	position: absolute;
-// 		bottom: -18.5%;
-// 		left: -4%;
-// 		width: 170px;
-// 		height: 219px;
-// 		img{
-// 			width: 100%;
-// 			height: auto;
-// 		}
-// 	@include tablet{
-// 		position: absolute;
-// 			bottom: -10%;
-//             right: -5%;
-// 			z-index: 5;
-// 	}
-
-// @include desktop{
-//     position: absolute;
-//     bottom: -11.2%;
-//     right: 8.5%;
-// 		z-index: 5;
-// }
-
-// }
-
-
 .hero__image {
-	@include max-mobile{
+	@include max-mobile {
 		position: absolute;
-	bottom: -6.4%;
+		bottom: -6.4%;
 		left: 20%;
-				
+
 	}
+
 	@include tablet {
-		// position: absolute;
-		// 	bottom: -5.9%;
-		// 	right: 13%;
-		// 	z-index: 5;
 		z-index: 5;
-			position: absolute;
-			bottom: -9.9%;
-			right: 13%;
+		position: absolute;
+		bottom: -9.9%;
+		right: 13%;
 	}
 
 	@include desktop {

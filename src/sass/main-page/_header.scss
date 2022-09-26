@@ -27,18 +27,13 @@
         padding-right: 32px;
         padding-left: 32px;
     }
-@include desktop {
-    align-items: center;
-    padding-right: 16px;
-    padding-left: 16px;
-}
-}
 
-// .header__wrap-centered{
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-// }
+    @include desktop {
+        align-items: center;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
 
 .header__logo {
     width: 40px;
@@ -84,7 +79,7 @@
     }
 }
 
-.current{
+.current {
     color: $accent-color;
 }
 
@@ -153,8 +148,6 @@
 }
 
 
-
-
 .mobile-menu {
     position: fixed;
     left: 0;
@@ -196,10 +189,10 @@
 
 .mobile-menu__container {
     display: flex;
-        flex-direction: column;
-        padding: 31px;
-        height: 100%;
-        overflow: auto;
+    flex-direction: column;
+    padding: 31px;
+    height: 100%;
+    overflow: auto;
 }
 
 .mobile-menu__top {
@@ -208,6 +201,7 @@
     justify-content: space-between;
     min-height: 80px;
     margin-bottom: 52px;
+
     @include tablet {
         margin-bottom: 76px;
     }
@@ -233,29 +227,24 @@
 .mobile-menu__cross:hover > .mobile-menu__icon-cross {
     fill: $accent-color;
     stroke: $accent-color;
-            transform: rotate(360deg);
-            transform-origin: center;
-            @include transition();
-            transition-property: fill, transform;
-   
+    transform: rotate(360deg);
+    transform-origin: center;
+    @include transition();
+    transition-property: fill, transform;
 }
 
-
-.mobile-menu__navigation-centered{
+.mobile-menu__navigation-centered {
     display: flex;
     flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
 }
-
-
 
 .mobile-menu__navigation {
     flex: 1 0 auto;
     text-align: center;
 }
-
 
 .mobile-menu__list {
     margin-bottom: 111px;
@@ -322,7 +311,8 @@
 }
 
 
-// MODAL
+
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -406,6 +396,6 @@
     height: 20px;
 }
 
-.mobile-modal__icon-cross{
+.mobile-modal__icon-cross {
     fill: $dark-color;
 }
