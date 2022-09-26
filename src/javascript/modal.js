@@ -3,16 +3,17 @@
     openModalBtn: document.querySelector('[data-modal-open]'),
     openMobileBtn: document.querySelector('[data-mobile-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
+    closeMobileBtn: document.querySelector('[data-mobile-close]'),
     modal: document.querySelector('[data-modal]'),
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.openMobileBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
+  refs.closeMobileBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
     document.body.classList.toggle('modal-open');
     refs.modal.classList.toggle('is-hidden');
   }
 })();
-
