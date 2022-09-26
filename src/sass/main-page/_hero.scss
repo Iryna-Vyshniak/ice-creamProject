@@ -104,7 +104,6 @@
 	}
 }
 
-
 @keyframes textclip {
 	to {
 		background-position: 250% center;
@@ -328,11 +327,11 @@
 
 &::after {
 	position: absolute;
-	content: "";
 	top: 15px;
 	left: 0;
 	right: 0;
 	z-index: -1;
+	content: "";
 	height: 100%;
 	width: 100%;
 	border-radius: 50%;
