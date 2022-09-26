@@ -1,7 +1,7 @@
 .buy-now {
     position: absolute;
-    width: 568px;
-    height: 644px;
+    width: 280px;
+    height: 986px;
     top: 0px;
     left: 0px;
     transform: translate(0%, 0%);
@@ -14,6 +14,9 @@
     padding: 28px;
 
     @include tablet {
+        width: 568px;
+        height: 644px;
+
         padding: 32px 54px;
     }
 }
@@ -23,7 +26,7 @@
 
     font-family: "Seymour One", Calibri, sans-serif;
     @include fonts(null, 16, 1.5);
-    margin-bottom: 20px;
+    margin-bottom: 83.86px;
 
     @include tablet {
         @include fonts(null, 20, 1.4);
@@ -36,9 +39,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 83.86px;
 
-    margin-bottom: 24.25px;
+    margin: 0 auto 24.25px;
 
     @include tablet {
         flex-direction: row;
@@ -51,19 +54,22 @@
 .order__item {
     position: relative;
     width: 132px;
-    height: 136.4px;
+    height: 134.4px; 
+    padding-top: 95.98px;
+    padding-bottom: 20.21px;
 
     @include tablet {
         height: 198px;
         flex-basis: 132px;
         min-width: 132px;
-    }
 
-    padding-top: 158px;
-    padding-bottom: 20px;
+        padding-top: 158px;
+        padding-bottom: 20px;
+    }
 
     border: 2px solid grey; //***temp
     border-radius: 15.78px;
+    border-top: none;
     
     text-align: center;
 }
@@ -72,12 +78,19 @@
 
     content: "";
     position: absolute;
-    top: 0px;
+    top: -63.65px;
     left: -2px;
 
     width: 132px;
-    height: 138px;
-    outline: 1px solid grey;
+    height: 139.43px;     
+
+}
+
+.order__item:nth-child(1)::before {
+    background-image: url(../images/modals/buy-now/ice-03-des-x1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 
