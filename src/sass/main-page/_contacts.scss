@@ -1,9 +1,6 @@
 .contacts__section {
     background-color:  #84A178;
     padding-bottom: 40px;
-    @include tablet {
-     padding-bottom: 40px;
-    }
     @include desktop {
      padding-bottom: 120px;
     }
