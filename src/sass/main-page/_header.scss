@@ -60,6 +60,8 @@
 }
 
 .navigation__list {
+    position: relative;
+    z-index: 5;
     display: flex;
 }
 
