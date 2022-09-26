@@ -1,9 +1,7 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 
-<!-- <symbol id="icon-burger" viewBox="0 0 48 32">
-<path d="M0 5.333v-5.333h48v5.333h-48zM0 18.667h48v-5.333h-48v5.333zM0 32h48v-5.333h-48v5.333z"></path>
-</symbol> -->
+
 
 <symbol id="icon-burger" viewBox="0 0 32 32">
 <path fill="none" stroke="" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M6 10h20"></path>
@@ -18,6 +16,11 @@
 
 <symbol id="icon-white-arrow" viewBox="0 0 82 32">
 <path d="M81.414 17.414c0.781-0.781 0.781-2.047 0-2.828l-12.728-12.728c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l11.314 11.314-11.314 11.314c-0.781 0.781-0.781 2.047 0 2.828s2.047 0.781 2.828 0l12.728-12.728zM0 18h80v-4h-80v4z"></path>
+</symbol>
+
+
+<symbol id="icon-greater" viewBox="0 0 12 12">
+<path d="M4 2L8.94845 6L4 10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="1"/>
 </symbol>
 
 <symbol id="icon-Arrow-middle" viewBox="0 0 82 32">
