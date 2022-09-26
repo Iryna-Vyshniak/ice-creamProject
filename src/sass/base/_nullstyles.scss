@@ -15,8 +15,9 @@ ul {
 }
 
 button {
-     display: block;
+    display: block;
     cursor: pointer;
+    // cursor: url("../images/cursor-min.png") 24 33, auto;
     border: none;
     font-family: inherit;
     
@@ -25,8 +26,8 @@ button {
 a {
     display: inline-block;
     color: inherit;
-    text-decoration: none;
-    
+    text-decoration: none; 
+    // cursor: url("../images/cursor-min.png") 24 33, auto;
 }
 
 address {

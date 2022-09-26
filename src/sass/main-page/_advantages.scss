@@ -1,14 +1,18 @@
 .advantages__section {
     background-color:  #84A178;
+    padding-top: 66px;
     padding-bottom: 60px;
   
+
     @include mobile{
         width:100%;
     }
     @include tablet {
+        padding-top: 82px;
         padding-bottom: 204px;
     }
     @include desktop {
+        padding-top: 90px;
         padding-bottom: 180px;
 }
 }
@@ -76,7 +80,6 @@
     position: relative;
 }
 .cow::before {
-    content: url('../images/advantages/cow.png');
     position: absolute;
     display: block;
     width: 50px;
@@ -84,10 +87,15 @@
     top: -65px; 
     left: 50%;
     transform: translate(-50%); 
-    @include mobile {
+   
     top: -65px; 
     left: 50%;
     transform: translate(-50%); 
+    content: "";
+    background: url('../images/advantages/cow.png');
+    background-size: cover;
+    @include retina {
+        background-image: url('../images/advantages/cow-2x.png');         
     }
 }
 
@@ -96,7 +104,6 @@
 }
 
 .weight::before{
-    content: url('../images/advantages/weight.png');
     position: absolute;
     display: block;
     width: 50px;
@@ -104,6 +111,12 @@
     top: -65px; 
     left: 50%;
     transform: translate(-50%);
+    content:"";
+    background: url('../images/advantages/weight.png');
+    background-size: cover;
+    @include retina {
+        background-image: url('../images/advantages/weight-2x.png');  
+    }
 }
 
 .ice {
@@ -111,7 +124,6 @@
 }
 
 .ice::before {
-    content: url('../images/advantages/ice.png');
     position: absolute;
     display: block;
     width: 50px;
@@ -119,35 +131,10 @@
     top: -65px; 
     left: 50%;
     transform: translate(-50%);
-}
-
-.advantages__image {
-    position: relative;
-}
-
-.advantages__image::after {
-    position: absolute;
-    content: url('../images/advantages/ice-creams-mob.png');
-    position: absolute;
-    display: block;
-    border-radius: 24px;
-    top: 30px; 
-    left: 50%;
-    transform: translate(-50%);
-    
-    @include mobile{
-    max-width: 100%;
+    content:"";
+    background: url('../images/advantages/ice.png');
+    background-size: cover;
+    @include retina {
+        background-image: url('../images/advantages/ice-2x.png');
     }
-    @include tablet {
-    content: url('../images/advantages/ice-creams-tabl.png');
-    max-width: 100%;
-    top: 30px; 
-    left: 47.4%;    
-}
-   @include desktop {
-    content: url('../images/advantages/ice-creams-desk.png');
-    max-width: 100%; 
-    top: 30px; 
-    left: 50%; 
-}
 }

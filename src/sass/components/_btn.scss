@@ -1,7 +1,7 @@
 .btn {
   min-width: 134px;
   height: 40px;
-  cursor: pointer;
+  // cursor: url("../images/cursor-min.png") 24 33, auto;
 
   font-family: inherit;
   @include fonts(600, 14, 1.29, 0.04em);
@@ -28,26 +28,28 @@
 .btn--color-light {
   background-color: $btn-light-bg-color;
   &:focus {
-    color: $light-btn-color;
-    border-color: $btn-dark-border-color;
-    background-color: $btn-dark-bg-color;
+      color: $light-btn-color;
+      border-color: $btn-dark-border-color;
+      background-color: $btn-dark-bg-color;
   }
-  &:hover {
-    border-color: $btn-dark-border-color;
-    color: $dark-btn-color;
-    background-color: $btn-dark-bg-color;
-  }
+    &:hover {
+      border-color: $btn-dark-border-color;
+      color: $dark-btn-color;
+      background-color: $btn-dark-bg-color;
+    }
 }
+
 .btn--color-dark {
   background-color: $btn-dark-bg-color;
-  &:focus {
-    color: $light-btn-color;
-    border-color: $btn-dark-border-color;
-    background-color: $btn-dark-bg-color;
+   &:focus {
+      color: $light-btn-color;
+      border-color: $btn-dark-border-color;
+      background-color: $btn-dark-bg-color;
+    }
+  
+    &:hover {
+      border-color: $btn-dark-border-color;
+      color: $dark-btn-color;
+      background-color: $btn-dark-bg-color;
+    }
   }
-  &:hover {
-    border-color: $btn-dark-border-color;
-    color: $dark-btn-color;
-    background-color: $btn-dark-bg-color;
-  }
-}

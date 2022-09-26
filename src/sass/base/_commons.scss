@@ -3,6 +3,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.76;
+  // cursor: url("../images/cursor-min.png") 24 33, auto;
 }
 
 .no-scroll {
@@ -21,6 +22,6 @@ body {
   flex-direction: column;
 }
 
-.page-main {
+main {
   flex: 1 1 auto;
 }

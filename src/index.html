@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ice cream</title>
 
+    <link rel="shortcut icon" type="image/ico" href="./images/favicon.ico" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,24 +14,28 @@
       rel="stylesheet"
     />
 
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <include src="./partials/header.html"></include>
+    <div class="wrapper">
+      <include src="./partials/header.html"></include>
 
-    <main>
-      <include src="./partials/hero.html"></include>
-      <include src="./partials/products.html"></include>
-      <include src="./partials/about.html"></include>
-      <include src="./partials/advantages.html"></include>
-      <include src="./partials/gallery.html"></include>
-      <include src="./partials/customer-reviews.html"></include>
-      <include src="./partials/contacts.html"></include>
-    </main>
+      <main>
+        <include src="./partials/hero.html"></include>
+        <include src="./partials/products.html"></include>
+        <include src="./partials/about.html"></include>
+        <include src="./partials/advantages.html"></include>
+        <include src="./partials/gallery.html"></include>
+        <include src="./partials/customer-reviews.html"></include>
+        <include src="./partials/contacts.html"></include>
+      </main>
 
-    <include src="./partials/footer.html"></include>
-
+      <include src="./partials/footer.html"></include>
+    </div>
     <!-- Modal -->
     <include src="./partials/modal/buy-now-1.html"></include>
     <include src="./partials/modal/buy-now-2.html"></include>
@@ -44,5 +50,7 @@
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+     <script src="./javascript/swiper.js"></script>
   </body>
 </html>

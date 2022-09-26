@@ -1,0 +1,54 @@
+.gallery {
+  position: relative;
+  height: 106px;
+
+  background-color: #fff;
+
+  @media screen and (min-width: 481px) {
+    height: 0;
+  }
+}
+
+.gallery__overflow {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+
+  width: 279px;
+  height: 130px;
+
+  @media screen and (min-width: 481px) {
+    width: 481px;
+    height: 222px;
+  }
+
+  @include tablet {
+    top: -164px;
+    height: 327px;
+    width: 704px;
+  }
+
+  @include desktop {
+    top: -98px;
+    height: 422px;
+    width: 1013px;
+  }
+
+  border-radius: 24px;
+
+  transform: translateX(-50%);
+}
+
+.gallery__img-mix {
+  transform: translateY(-20%);
+  @include desktop {
+    transform: translateY(-30%);
+  }
+}
+
+.gallery__img-str {
+  transform: translateY(-10%);
+  @include desktop {
+    transform: translateY(-20%);
+  }
+}

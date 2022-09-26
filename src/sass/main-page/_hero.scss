@@ -1,0 +1,328 @@
+.hero {
+	background-color: $hero-bg;
+}
+
+.hero__container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	// width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 20px;
+
+	@include max-mobile {
+		width: 328px;
+		min-height: 502px;
+	}
+
+	@include tablet {
+		width: 768px;
+		min-height: 415px;
+		padding: 0 32px;
+	}
+
+	@include desktop {
+		width: 1200px;
+		min-height: 664px;
+		padding: 0 16px;
+	}
+
+	background-image:url(../images/hero/ribbon-mob-min.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain;
+
+	@include retina {
+		background-image: url(../images/hero/ribbon-mob@2x-min.png);
+	}
+
+	@include tablet {
+		background-image: url(../images/hero/ribbon-tab-min.png);
+
+		@include retina {
+			background-image: url(../images/hero/ribbon-tab@2x-min.png);
+		}
+	}
+
+	@include desktop {
+		background-image: url(../images/hero/ribbon-desk-min.png);
+
+		@include retina {
+			background-image: url(../images/hero/ribbon-desk@2x-min.png);
+		}
+	}
+}
+
+.hero__content-wrap {
+	justify-content: space-between;
+	align-items: flex-end;
+	display: flex;
+}
+
+.hero__main-content {
+	max-width: 300px;
+	padding: 110px 0 0 20px;
+
+	@include tablet {
+		max-width: 250px;
+		padding: 104px 32px 0px 32px;
+	}
+
+	@include desktop {
+		max-width: 400px;
+		padding: 118px 16px 0px 16px;
+	}
+
+}
+
+.hero__title {
+	text-align: left;
+	flex-shrink: 1;
+	@include fonts(null, 26, 1.26, 0.04em);
+
+	background: linear-gradient(to right, #F8D24E 10%, #FCFCFC 50%, #b5f49e 60%);
+	background-size: auto auto;
+	background-clip: border-box;
+	background-size: 250% auto;
+	background-clip: text;
+	color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: textclip 2500ms linear infinite;
+	display: inline-block;
+
+	margin-bottom: 28px;
+
+	@include tablet {
+		@include fonts(null, 16.2531, 1.2);
+	}
+
+	@include desktop {
+		@include fonts(null, 38, 1.2, 0.04);
+		margin-bottom: 32px;
+	}
+}
+
+
+@keyframes textclip {
+	to {
+		background-position: 250% center;
+	}
+}
+
+
+.hero__title-big {
+	flex-shrink: 1;
+	@include fonts(null, 26, 1.26, 0.04em);
+
+	@include tablet {
+		@include fonts(null, 18, 1.2);
+	}
+
+	@include desktop {
+		@include fonts(null, 38, 1.2, 0.04);
+	}
+
+}
+
+.hero__buttons {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.hero__button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-width: 62px;
+	height: 24px;
+
+    padding: 8px 14px;
+	border-radius: 8px;
+	@include fonts(600, 8, 1.25);
+
+	@include desktop {
+		min-width: 134px;
+		height: 42px;
+		padding: 12px 34px;
+		border-radius: 10px;
+		@include fonts(600, 14, 1.2);
+	}
+
+	&:not(:last-child) {
+		margin-right: 8px;
+		@include desktop {
+			margin-right: 12px;
+		}
+	}
+
+	&:nth-child(even) {
+		text-decoration: underline;
+		background-color: transparent;
+		border: none;
+		color: $accent-color;
+		&:focus {
+			color: $light-btn-color;
+		}
+		&:hover {
+			color: $btn-dark-border-color;
+		}
+	}
+}
+
+.hero__amount {
+	display: none;
+
+	@include tablet {
+		display: block;
+	}
+}
+
+.hero__txt {
+	text-align: right;
+	text-transform: uppercase;
+	color: $dark-color;
+	margin-bottom: 4px;
+
+	@include tablet {
+		@include fonts(900, 28, 1.2, 0.04);
+	}
+
+	@include desktop {
+		@include fonts(900, 46, 1.08, 0.04);
+	}
+}
+
+.hero__txt-caffe {
+	text-align: right;
+	text-transform: uppercase;
+	color: $light-color;
+
+	@include tablet {
+		@include fonts(null, 8, 1.2);
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	@include desktop {
+		@include fonts(null, 14, 1.2);
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+}
+
+.hero__wrap-plate {
+	display: flex;
+	align-items: flex-end;
+	display: flex;
+
+	@include tablet {
+		position: absolute;
+		bottom: 3%;
+		left: 5%;
+		gap: 33px;
+	}
+
+	@include desktop {
+		position: absolute;
+		left: 2%;
+		bottom: 8%;
+		gap: 14px;
+		z-index: 5;
+	}
+}
+
+.hero__ad {
+	display: none;
+
+	@include tablet {
+		max-width: 151px;
+		display: block;
+
+		@include desktop {
+			max-width: 200px;
+		}
+
+	}
+}
+
+.hero__plate-img {
+	display: none;
+
+	@include tablet {
+		display: block;
+	}
+}
+
+.hero__after-title {
+	color: $light-color;
+
+	@include tablet {
+		margin-bottom: 32px;
+		@include fonts(null, 12, 1.4);
+	}
+
+	@include desktop {
+		margin-bottom: 32px;
+		@include fonts(null, 14, 1.4);
+	}
+}
+
+.hero__link-btn {
+	color: $light-color;
+	display: block;
+	background-color: transparent;
+	margin: 0;
+
+	&:hover > .hero__icon {
+		width: 3.1875em;
+	}
+
+	&:focus > .hero__icon {
+		width: 2.1669921875em;
+		stroke-width: 1;
+	}
+}
+
+.hero__icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+	width: 2.5625em;
+	@include transition();
+	transition-property: width;
+}
+
+.hero__image {
+	@include max-mobile {
+		position: absolute;
+		bottom: -6.4%;
+		left: 20%;
+
+	}
+
+	@include tablet {
+		z-index: 5;
+		position: absolute;
+		bottom: -9.9%;
+		right: 13%;
+	}
+
+	@include desktop {
+		position: absolute;
+		bottom: -11.2%;
+		right: 8.5%;
+		z-index: 5;
+	}
+
+}
