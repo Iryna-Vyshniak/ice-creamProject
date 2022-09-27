@@ -119,6 +119,8 @@
 .products__icon {
   stroke: #131313;
   display: block;
+  @include transition;
+  transition-property: width;
 }
 
 .products__list {
