@@ -46,6 +46,9 @@
 }
 
 .modal__button-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -61,8 +64,7 @@
 
 .modal__button-close:focus,
 .modal__button-close:hover {
-  border-color: $accent-color;
-  background-color: $accent-color;
+  fill: $accent-color;
 }
 
 .modal__icon-close {
