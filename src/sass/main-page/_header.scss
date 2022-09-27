@@ -76,7 +76,7 @@
     color: $light-color;
     @include transition();
     transition-property: color;
-    
+
 
     &:focus,
     &:hover {
@@ -191,7 +191,8 @@
     padding: 27px;
     height: 100vh;
     overflow: auto;
-    @include tablet{
+
+    @include tablet {
         padding: 31px;
     }
 }
@@ -260,8 +261,13 @@
         margin-bottom: 40px;
     }
 }
-.mobile-menu__item:nth-child(2){
+
+.mobile-menu__item:nth-child(2) {
     width: 300px;
+
+    @include tablet {
+        width: 500px;
+    }
 }
 
 .mobile-menu__link {
@@ -303,7 +309,7 @@
     height: 12px;
     fill: transparent;
     stroke: currentColor;
-    
+
     .mobile-menu__btn:hover & {
         stroke: currentColor;
         @include transition();
