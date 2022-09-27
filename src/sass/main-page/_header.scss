@@ -104,7 +104,6 @@
     fill: $light-color;
     stroke: $light-color;
 
-
     @include desktop {
         display: none;
     }
@@ -116,10 +115,10 @@
 
     @include tablet {
         position: relative;
-        z-index: 6;
-        min-width: 152px;
-        height: 42px;
-        display: block;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-left: 32px;
     }
 
@@ -129,9 +128,7 @@
 }
 
 .btn-vector {
-    position: absolute;
-    top: 35%;
-    right: 11%;
+    margin-left: 7px;
     width: 12px;
     height: 12px;
     fill: transparent;
@@ -157,7 +154,7 @@
     top: 0;
 
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     z-index: 6;
     background-color: $mobile-menu-bg;
 
@@ -245,12 +242,12 @@
 }
 
 .mobile-menu__navigation {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     text-align: center;
 }
 
 .mobile-menu__list {
-    margin-bottom: 111px;
+    margin-bottom: 30px;
 }
 
 .mobile-menu__item:not(:last-child) {
@@ -281,9 +278,12 @@
 
 .mobile-menu__btn {
     position: relative;
-    display: block;
+    z-index: 5;
     max-width: 152px;
     height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include tablet {
         display: none;
@@ -292,14 +292,12 @@
 }
 
 .btn-vector {
-    position: absolute;
-    top: 35%;
-    right: 11%;
+    margin-left: 7px;
     width: 12px;
     height: 12px;
     fill: transparent;
     stroke: currentColor;
-
+    
     .mobile-menu__btn:hover & {
         stroke: currentColor;
         @include transition();
