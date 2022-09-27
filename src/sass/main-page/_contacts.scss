@@ -1,250 +1,250 @@
 .contacts__section {
-    background-color:  #84A178;
-    padding-bottom: 40px;
-    @include desktop {
-     padding-bottom: 120px;
-    }
+  background-color: #84a178;
+  padding-bottom: 40px;
+  @include desktop {
+    padding-bottom: 120px;
+  }
 }
 .contacts-main-container {
-    position: relative;
-    height: 1031px;
-    @include mobile {
-        height: 1135px; 
-    }
-    @include tablet {
-        height: 330px;  
-    }
-    @include desktop {
-    height:457px;
-    }
+  position: relative;
+  height: 1031px;
+  @include mobile {
+    height: 1135px;
+  }
+  @include tablet {
+    height: 330px;
+  }
+  @include desktop {
+    height: 457px;
+  }
 }
 
 .contacts__container {
-    margin-top: 300px;
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 50px;
-    left: 50%;
-    transform: translate(-50%);
+  margin-top: 300px;
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  top: -680px;
+  @include mobile {
+    top: -550px;
+  }
+  @include tablet {
     top: -680px;
-    @include mobile {
-        top: -550px;  
-    }
-    @include tablet {
-        top: -680px;
-    }
-    @include desktop {
-        top: -460; 
-    }
+  }
+  @include desktop {
+    top: -460;
+  }
 }
 
-
 .contacts__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 19.25px;
-    margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 19.25px;
+  margin-bottom: 32px;
+  align-items: center;
+  @include mobile {
     align-items: center;
-    @include mobile {
-        align-items: center;
-    }
-    @include tablet {
-      flex-direction: row;  
-      gap: 16px;
-      margin-bottom: 60px;
-    }
-    @include desktop {
-        flex-direction: row;  
-        gap: 32px;
-        margin-bottom: 64px; 
-    }
+  }
+  @include tablet {
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
 }
 
 .contacts__item {
-    display: flex;
-    flex-direction: column;
-    width: 280px;
-    height: 412px;
-    background-color: #FCFCFC;
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    border-radius: 24px;
-    padding: 40px 32px; 
-    @include mobile {
-        width: 350px;
-      height: 400px; 
-    }
-    @include tablet {
-      width: 224px;
-      height: 528px; 
-      padding: 40px 24px;
-    }
-    @include desktop {
-        width: 368px;
-        height: 538px; 
-        padding: 40px 40px;
-    }
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 412px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  padding: 40px 32px;
+  @include mobile {
+    width: 350px;
+    height: 400px;
+  }
+  @include tablet {
+    width: 224px;
+    height: 528px;
+    padding: 40px 24px;
+  }
+  @include desktop {
+    width: 368px;
+    height: 538px;
+    padding: 40px 40px;
+  }
 }
 
 .contacts__category {
-    display: flex;
-    max-width: 130px;
-    height: 16px;
-    background-color: #F8D24E;
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 186%;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    align-items: center;
-    justify-content: center; 
-    padding-left: 50px;
-    padding-right: 50px;
-     
-    @include tablet {
-        min-width: 73px;
-        max-width: 138px;
-        height: 28px;
-        border-radius: 6px;
-        margin-bottom: 32px;
-    }
-    @include desktop {
-        font-size: 16px;
-        min-width: 75px;
-        max-width: 138px;
-        margin-left: 0;
-    }
+  display: flex;
+  max-width: 130px;
+  height: 16px;
+  background-color: #f8d24e;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @include tablet {
+    min-width: 73px;
+    max-width: 138px;
+    height: 28px;
+    border-radius: 6px;
+    margin-bottom: 32px;
+  }
+  @include desktop {
+    font-size: 16px;
+    min-width: 75px;
+    max-width: 138px;
+    margin-left: 0;
+  }
 }
 
 .contacts__text {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 186%;
-    color: #131313; 
-    @include tablet {
-        font-size: 14px;
-    }  
-    @include desktop {
-        font-size: 16px;
-    }
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  color: #131313;
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 .contacts__address {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 183%;
-    color: #D6936D;
-    position: relative;
-    margin-top: 8px;
-    @include tablet  {
-        font-size: 14px;
-        margin-top: 12px;
-    }
-    @include desktop {
-        font-size: 16px;
-    }
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 183%;
+  color: #d6936d;
+  position: relative;
+  margin-top: 8px;
+  @include tablet {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 .contacts__description {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 186%;
-    color: #ABABAB;
-    @include tablet  {
-        font-size: 14px;
-    }
-    @include desktop {
-        font-size: 16px;
-    }
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  color: #ababab;
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 .contacts__contact {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    color: #131313;
-    @include desktop {
-        font-size: 16px;
-    }
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #131313;
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
-.line{
-    border-top: 1px solid #E1E1E1;
-    width: 216px;
-    margin-bottom: 24px;
-    margin-top: 24px; 
-    @include mobile {
-        width: 280px;
-    }
-    @include tablet {
-        width: 176px;
-        margin: 32px 0;
-        align: center;
-    }  
-    @include desktop {
-        width: 288px;
-        align: center;
-    }
+.line {
+  border-top: 1px solid #e1e1e1;
+  width: 216px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  @include mobile {
+    width: 280px;
+  }
+  @include tablet {
+    width: 176px;
+    margin: 32px 0;
+    align: center;
+  }
+  @include desktop {
+    width: 288px;
+    align: center;
+  }
 }
 
 .button-locations {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 196px;
-    height: 42px;
-    &:focus {
-        background-color: #F8D24E;
-        color: #131313;
-        border-color: #F8D24E;
-      }
-      &:hover {
-        background-color: #F8D24E;
-        color: #131313;
-        border-color: #F8D24E;
-      }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 196px;
+  height: 42px;
+  background-color: #f8d24e;
+  border-color: #f8d24e;
+  &:focus {
+    color: #fcfcfc;
+    border-color: #0a8817;
+    background-color: #0a8817;
+  }
+  &:hover {
+    color: #131313;
+    border-color: #0a8817;
+    background-color: #0a8817;
+  }
 }
 
 .button-franchise {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 196px;
-    height: 42px;
-    
-    &:focus {
-        background-color: #F8D24E;
-        color: #131313;
-        border-color: #F8D24E;
-      }
-      &:hover {
-        background-color: #F8D24E;
-        color: #131313;
-        border-color: #F8D24E;
-      }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 196px;
+  height: 42px;
+
+  &:focus {
+    background-color: #f8d24e;
+    color: #fcfcfc;
+    border-color: #f8d24e;
+  }
+  &:hover {
+    background-color: #f8d24e;
+    color: #131313;
+    border-color: #f8d24e;
+  }
 }
 
 .button__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    @include tablet {
-        flex-direction: row;
-        align-content: center;
-    }
-    @include desktop {
-        flex-wrap: nowrap;
-        flex-direction: row;
-        align-content: center;
-    }
-    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  @include tablet {
+    flex-direction: row;
+    align-content: center;
+  }
+  @include desktop {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+  }
 }
 
-.btn-ico__icon {  
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
+.btn-ico__icon {
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
 }

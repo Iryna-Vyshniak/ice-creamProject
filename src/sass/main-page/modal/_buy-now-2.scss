@@ -10,6 +10,12 @@
   }
 }
 
+.backdrop.scroll-backdrop.is-hidden .products-modal {
+  @media screen and (max-height: 995px) {
+    transform: translate(-50%, 0);
+  }
+}
+
 .products-modal {
   padding: 28px 20px 32px 20px;
   border: 2px solid #f8d24e;
@@ -57,12 +63,7 @@
     top: 10px;
     z-index: -1;
 
-    background: linear-gradient(
-        0deg,
-        rgba(156, 190, 143, 0.7),
-        rgba(156, 190, 143, 0.7)
-      ),
-      #d9d9d9;
+    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #d9d9d9;
     box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
   }
 }
@@ -77,12 +78,7 @@
   top: 10px;
   z-index: -1;
 
-  background: linear-gradient(
-      0deg,
-      rgba(248, 210, 78, 0.7),
-      rgba(248, 210, 78, 0.7)
-    ),
-    #d9d9d9;
+  background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #d9d9d9;
   box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
 }
 
@@ -96,12 +92,7 @@
   top: 10px;
   z-index: -1;
 
-  background: linear-gradient(
-      0deg,
-      rgba(213, 117, 63, 0.7),
-      rgba(213, 117, 63, 0.7)
-    ),
-    #d9d9d9;
+  background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #d9d9d9;
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
 }
 

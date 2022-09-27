@@ -25,23 +25,19 @@
     padding-top: 223px;
   }
 
-  @media screen and (min-width:800px) {
+  @media screen and (min-width: 800px) {
     height: 959px;
 
     background-image: url(../images/customers/bg_d-min.png);
     @include retina {
       background-image: url(../images/customers/bg_d@2x-min.png);
     }
-
-    
   }
   @include desktop {
     height: 1013px;
     padding-top: 456px;
   }
 }
-
-
 
 .customers__text {
   display: flex;
@@ -85,7 +81,7 @@
   height: 85px;
   width: 85px;
 
-margin: 0 auto 32px;
+  margin: 0 auto 32px;
 
   @include mobile {
     margin-bottom: 28px;
@@ -96,7 +92,6 @@ margin: 0 auto 32px;
   }
 
   border-radius: 44px;
-
 }
 
 .customers__bg-grey {
@@ -120,24 +115,37 @@ margin: 0 auto 32px;
   color: $dark-color;
 }
 
-.customers__pagination{
-position: static;
+.customers__pagination {
+  position: static;
 
-margin-top: 32px;
+  margin-top: 32px;
 }
 
-.swiper-pagination-bullet{
+.customers .swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: url('../images/cursor-green.png') 15 12, auto;
+}
+
+.swiper-pagination-bullet {
   height: 12px;
   width: 12px;
 
-background-color: #D9D9D9;
+  background-color: #d9d9d9;
 
   margin-left: 9px;
   margin-right: 9px;
 
   opacity: 1;
+
+  transition: background-color 0.3s linear, opacity 0.3s linear;
+
+  &:hover,
+  &:focus {
+    background-color: #84a178;
+    opacity: 0.6;
+  }
 }
 
-.swiper-pagination-bullet-active{
-  background-color: #84A178;
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #84a178;
+  opacity: 1;
 }
