@@ -1,156 +1,153 @@
 .backdrop-modal-read {
-    position: fixed;
-    top: 0;
-    z-index: 7;
-    width: 100%;
-    height: 100%;
-    background-color: #aeacab5f;
-    @include transition ();
-    transition-property: opacity, visibility;
+  position: fixed;
+  top: 0;
+  z-index: 7;
+  width: 100%;
+  height: 100%;
+  background-color: #aeacab5f;
+  @include transition();
+  transition-property: opacity, visibility;
 }
 
 .modal-read {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
 
-    max-width: 280px;
+  max-width: 280px;
+  width: 100%;
+  min-height: 459px;
+  padding: 28px;
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: $accent-color;
+  border-radius: 10px;
+  background-color: $light-color;
+  transform: translate(-50%, -50%);
+  @include transition();
+  transition-property: min-height;
+
+  @include desktop {
+    max-width: 568px;
+    min-height: 449px;
     width: 100%;
-    min-height: 459px;
-    padding: 28px;
-
-    border-width: 2px;
-    border-style: solid;
-    border-color: $accent-color;
-    border-radius: 10px;
-    background-color: $light-color;
-    transform: translate(-50%, -50%);
-    @include transition();
-    transition-property: min-height;
-
-    @include desktop {
-        max-width: 568px;
-        min-height: 449px;
-        width: 100%;
-    }
+  }
 }
 
 .is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .backdrop-modal-read.is-hidden .modal-read {
-    transform: translate(-50%, -50%);
-    min-height: 0;
+  transform: translate(-50%, -50%);
+  min-height: 0;
 }
 
-
 .modal-read__button-close {
-    position: absolute;
-    z-index: 9;
-    top: 10px;
-    right: 10px;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 5px;
-    @include circle(25, 25, 50%);
+  position: absolute;
+  z-index: 9;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
+  @include circle(25, 25, 50%);
 
-    background: transparent;
-    border-width: 1px;
-    border-style: solid;
-    border-color: $light-color;
-
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $light-color;
 }
 
 .modal-read__icon-close:focus > .modal-read__icon-cross,
 .modal-read__icon-close:hover > .modal-read__icon-cross {
-    fill: $accent-color;
-    @include transition();
-    transition-property: fill;
-
+  fill: $accent-color;
+  @include transition();
+  transition-property: fill;
 }
 
 .modal-read__icon-close {
-    position: absolute;
-    z-index: 10;
-    top: 50%;
-    left: 50%;
-    transform: translate(-45%, -45%);
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -45%);
 
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .modal-read__icon-cross {
-    fill: $dark-color;
+  fill: $dark-color;
 }
 
 .modal-read__centered {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal-read__title {
-    margin-bottom: 20px;
-    @include fonts(null, 16, 1.5);
-    text-align: center;
-    text-transform: none;
+  margin-bottom: 20px;
+  @include fonts(null, 16, 1.5);
+  text-align: center;
+  text-transform: none;
 
-    @include desktop {
-        margin-bottom: 34px;
-        @include fonts(null, 20, 1.4);
-    }
+  @include desktop {
+    margin-bottom: 34px;
+    @include fonts(null, 20, 1.4);
+  }
 }
 
 .modal-read__video {
-    display: none;
-    max-width: 224px;
+  display: none;
+  max-width: 224px;
+  width: 100%;
+  height: 199px;
+
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: $dark-color;
+
+  @include desktop {
+    display: block;
+    margin-bottom: 32px;
+    max-width: 448px;
     width: 100%;
-    height: 199px;
-
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 10px;
-    background-color: $dark-color;
-
-    @include desktop {
-        display: block;
-        margin-bottom: 32px;
-        max-width: 448px;
-        width: 100%;
-        height: 205px;
-    }
+    height: 205px;
+  }
 }
 
 .modal-read__video--mobile {
-    display: block;
+  display: block;
 
-    @include desktop {
-        display: none;
-    }
+  @include desktop {
+    display: none;
+  }
 }
 
 .modal-read__video--desktop {
-    display: none;
+  display: none;
 
-    @media desktop {
-        display: block;
-    }
+  @media desktop {
+    display: block;
+  }
 }
 
 .modal-read__text {
-    max-width: 224px;
-    @include fonts(null, 14, 1.4);
-    text-align: justify;
-    color: $dark-color;
+  max-width: 224px;
+  @include fonts(null, 14, 1.4);
+  text-align: justify;
+  color: $dark-color;
 
-    @include desktop {
-        max-width: 448px;
-        @include fonts(null, 16, 1.4);
-    }
+  @include desktop {
+    max-width: 448px;
+    @include fonts(null, 16, 1.4);
+  }
 }
