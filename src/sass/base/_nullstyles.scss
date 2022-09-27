@@ -5,36 +5,35 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
+  margin: 0;
 }
 
 ul {
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
 }
 
 button {
-    display: block;
-    cursor: pointer;
-    // cursor: url("../images/cursor-min.png") 24 33, auto;
-    border: none;
-    font-family: inherit;
-    
+  display: block;
+  cursor: pointer;
+  cursor: url('../images/cursor-min.png') 15 12, auto;
+  border: none;
+  font-family: inherit;
 }
 
 a {
-    display: inline-block;
-    color: inherit;
-    text-decoration: none; 
-    // cursor: url("../images/cursor-min.png") 24 33, auto;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  cursor: url('../images/cursor-min.png') 15 12, auto;
 }
 
 address {
-    font-style: normal;
+  font-style: normal;
 }
 
 img {
-    display: block;
-    margin: 0;
+  display: block;
+  margin: 0;
 }
