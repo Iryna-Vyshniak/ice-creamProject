@@ -41,6 +41,12 @@
 // @include mobile;
 // @include min-max-mobile;
 
+@mixin pre-mobile {
+@media screen and (max-width: 479px) {
+@content;
+}
+} 
+
 @mixin mobile {
   @media screen and (min-width: 480px) {
     @content;
