@@ -1,9 +1,11 @@
 .footer {
   background-color: $contacts-bg;
   padding-bottom: 62px;
+
   @include tablet {
     padding-bottom: 13px;
   }
+
   @include desktop {
     padding-bottom: 11px;
   }
@@ -17,6 +19,7 @@
 
     padding-bottom: 32px;
   }
+
   @include desktop {
     padding-bottom: 54px;
   }
@@ -109,6 +112,7 @@
 }
 
 .footer__link {
+
   &:focus .footer__svg,
   &:hover .footer__svg {
     fill: $light-color;
@@ -136,7 +140,8 @@
 
   fill: $contacts-bg;
 
-  transition-property: fill, scale;
+  transition-property: fill,
+  scale;
   @include transition;
 }
 
@@ -205,4 +210,55 @@
   }
 
   color: #7a7a7a;
+}
+
+
+
+// button top
+
+.up-button {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 5;
+  display: block;
+  margin: 0;
+  padding: 0;
+  @include circle();
+  background: linear-gradient(145deg, #8dac80, #77916c);
+  box-shadow: 4px 4px 9px #687f5f,
+              -4px -4px 9px #a0c391;
+  @include transition ();
+  transition-property: box-shadow, transform, fill;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px -1px 5px 3px $light-color, 0px -1px 7px 5px $accent-color;
+    transform: scale(0.8);
+  }
+}
+
+.icon-top {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include transition();
+  animation: changeSvgColor 2500ms linear infinite;
+}
+
+.up-button:hover > * .icon__top,
+.up-button:focus > * .icon__top {
+  fill: $btn-dark-border-color;
+}
+
+
+@keyframes changeSvgColor {
+  0% {
+    fill: $accent-color;
+  }
+
+  100% {
+    fill: $light-color;
+  }
 }

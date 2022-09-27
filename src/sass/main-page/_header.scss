@@ -59,7 +59,6 @@
     }
 }
 
-// add z-index to navigation
 .navigation__list {
     position: relative;
     z-index: 5;
@@ -75,6 +74,9 @@
     align-items: center;
     @include fonts(700, 16, 1.17);
     color: $light-color;
+    @include transition();
+    transition-property: color;
+    
 
     &:focus,
     &:hover {
@@ -186,9 +188,12 @@
 .mobile-menu__container {
     display: flex;
     flex-direction: column;
-    padding: 31px;
+    padding: 27px;
     height: 100vh;
     overflow: auto;
+    @include tablet{
+        padding: 31px;
+    }
 }
 
 .mobile-menu__top {
@@ -255,12 +260,17 @@
         margin-bottom: 40px;
     }
 }
+.mobile-menu__item:nth-child(2){
+    width: 300px;
+}
 
 .mobile-menu__link {
     @include transition();
     transition-property: color;
     @include fonts(700, 32, 1.2);
     color: $light-color;
+    @include transition();
+    transition-property: color;
 
     &:focus,
     &:hover {

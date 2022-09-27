@@ -13,11 +13,13 @@
 
 	@include max-mobile{
 		min-width: 320px;
+		max-width: 480px;
 		min-height: 502px;
 	}
 
 	@include tablet {
 		width: 768px;
+		max-width: auto;
 		min-height: 415px;
 		padding: 0 32px;
 	}
@@ -279,6 +281,7 @@
 	display: block;
 	background-color: transparent;
 	margin: 0;
+	
 
 	&:hover > .hero__icon {
 		width: 3.1875em;
@@ -335,7 +338,7 @@
 
 @media screen and (min-width: 563px) {
 	position: absolute;
-		bottom: -10%;
+		bottom: -9.6%;
 		left: 25%;
 }
 
